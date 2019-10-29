@@ -1,12 +1,12 @@
 # Site settings
 title: DentistSmile | Dental Jekyll Theme
 description: "A responsive Jekyll theme for dental clinics."
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/dentistsmile" # the subpath of your site, e.g. /blog
 url: "" # the name of your domain
 logo_url: svg/min/logo.svg
 
 # Hero
-hero: 
+hero:
     hero_img: hero.jpg
     hero_title: DentistSmile
     hero_description: A responsive Jekyll theme for dental clinics.
@@ -61,5 +61,5 @@ exclude: [
 ]
 
 # Theme Settings
-analytics: 
+analytics:
 google_verification:
