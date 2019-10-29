@@ -1,29 +1,32 @@
 <!-- Start Header -->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand scroll" href="#top"><img src="{{ site.logo_url }}" alt="{{ site.title }}"></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse scrollspy" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="scroll" href="#top">Home</a></li>
-                <li><a class="scroll" href="#about">About</a></li>
-                <li><a class="scroll" href="#treatments">Treatments</a></li>
-                <li><a class="scroll" href="#team">Team</a></li>
-                <li><a class="scroll" href="#testimonials">Testimonials</a></li>
-                <li><a class="scroll" href="#gallery">Gallery</a></li>
-                <li><a class="scroll" href="#location">Location</a></li>
-            </ul>
-        </div>
-    </div>
+<header class="header py-1 py-lg-4">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
+			<a class="navbar-brand" href="{{"/" | relative_url}}">
+			<img src="{{"svg/min/logo.svg" | relative_url}}" alt="Eltham Family Dental">
+			</a>
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <small class="font-weight-bold black">MENU</small>
+				<img src="{{"svg/min/hamburger.svg" | relative_url}}" class="img-fluid open" width="14" alt="hamburger">
+				<img src="{{"svg/min/close.svg" | relative_url}}" class="img-fluid close d-none" width="14" alt="close">
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul id="menu-primary-menu" class="navbar-nav ml-lg-auto clearfix">
+					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-174 nav-item">
+						<a href="#" data-toggle="dropdown" class="nav-link">About</a>
+					</li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177 nav-item">
+						<a href="https://www.eyecareplus.com.au/eye-health/" class="nav-link">Eye Health</a>
+					</li>
+					<li class="menu-images menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-183 nav-item">
+						<a href="#" data-toggle="dropdown" class="nav-link">Eyewear</a>
+					</li>
+					<li class="mt-4 mt-lg-0 d-none d-lg-inline-block">
+						<a class="btn btn-white" href="https://www.eyecareplus.com.au/find-optometrist/">Find an Optometrist</a>
+					</li>
+				</ul>
+	</div>
 </nav>
+</div>
+{% include svg-defs.svg %}
+</header>
 <!-- End Header -->
