@@ -1,8 +1,8 @@
 # Site settings
-title: DentistSmile | Dental Jekyll Theme
-description: "A responsive Jekyll theme for dental clinics."
+title: Eltham Family Dental
+description: "Looking after Eltham and surrounding suburbs"
 baseurl: "/dentistsmile" # the subpath of your site, e.g. /blog
-url: "" # the name of your domain
+url: "https://elthamfamilydental.com.au/" # the name of your domain
 logo_url: svg/min/logo.svg
 
 # Hero
