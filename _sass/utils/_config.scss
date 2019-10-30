@@ -15,11 +15,37 @@ $fontWeightBold: 700;
 
 /* Colors
 -------------------------------*/
+/* COLORS */
+$orange: #EA6B10;
+$orange-light: #EF7621;
+$black: #1D1D1D;
+$grey-dark: #434343;
+$grey: #7D7D7D;
+$grey2: #DCDCDC;
+$grey3: #EDEDEB;
+$grey-light: #B7B7B7;
+$grey-lighter: #ECEBEA;
+$grey-lightest: #F2F2F2;
+
+$colors: (
+  'white': white,
+  'black': $black,
+  'orange': $orange,
+  'orange-light': $orange-light,
+  'grey': $grey,
+  'grey3': $grey3,
+  'grey-dark': $grey-dark,
+  'grey-light': $grey-light,
+  'grey-lighter': $grey-lighter,
+  'grey-lightest': $grey-lightest,
+);
+
+$border-color: $grey-light;
 
 /* Descriptive colors */
 $white: #fff;
-$black: #000;
-$grey: #333;
+// $black: #000;
+// $grey: #333;
 $greyLight: #555;
 $gallery: #eee;
 $alto: #ddd;
@@ -33,6 +59,32 @@ $colorHeading: $grey;
 $colorBase: $greyLight;
 $colorBg: $alabaster;
 $colorBorder: $alto;
+
+/*************************************************/
+/* IMAGES */
+$images: '../images';
+$fonts: '../fonts';
+
+/*************************************************/
+/* SPACINGS */
+$gutter: 60px;
+$gutter-md: 30px;
+$gutter-sm: 15px;
+
+$header-mobile: 49px;
+
+$input-height: 48px;
+
+$screen-admin-min: 783px;
+$screen-inner-content: 1000px;
+
+$g-admin-bar-small: 32px;
+$g-admin-bar-large: 46px;
+
+$letter-spacing: 0.4em;
+$letter-spacing-md: 0.2em;
+$letter-spacing-sm: 0.1em;
+$letter-spacing-xs: 0.05em;
 
 /* Spacing
 -------------------------------*/

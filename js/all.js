@@ -16149,9 +16149,9 @@ $.fn.gmap3 = function () {
 
     /* Hide menu after click
     ----------------------------------------------*/
-    $('.navbar-nav li a').click(function(event) {
-        $('.in').collapse('hide');
-    });
+    // $('.navbar-nav li a').click(function(event) {
+    //     $('.in').collapse('hide');
+    // });
 
     /* Smooth scroll to section
     ----------------------------------------------*/
@@ -16162,7 +16162,8 @@ $.fn.gmap3 = function () {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top-70
+                    // scrollTop: target.offset().top-70
+                    scrollTop: target.offset().top
                 }, 2000);
                 return false;
             }
@@ -16172,24 +16173,24 @@ $.fn.gmap3 = function () {
     /* Team slideshow
     ----------------------------------------------*/
     $("#team-carousel").owlCarousel({
- 
+
         autoPlay: 5000, //Set AutoPlay to 5 seconds
 
         items : 4,
         itemsDesktopSmall : [979,3],
         stopOnHover: true
- 
+
     });
 
     /* Testimonials slideshow
     ----------------------------------------------*/
     $("#testimonial-carousel").owlCarousel({
- 
+
         autoPlay: 6000, //Set AutoPlay to 6 seconds
- 
+
         singleItem: true,
         pagination : false
- 
+
     });
 
     /* Tooltip
@@ -16205,13 +16206,13 @@ $.fn.gmap3 = function () {
     /* Google map
     ----------------------------------------------*/
     $(".map").each(function(){
-            
+
         var data_zoom = 17;
-        
+
         if ($(this).attr("data-zoom") !== undefined) {
             data_zoom = parseInt($(this).attr("data-zoom"),10);
-        }   
-        
+        }
+
         $(this).gmap3({
             marker: {
                 values: [{
@@ -16231,7 +16232,7 @@ $.fn.gmap3 = function () {
                         } else {
                             $(this).gmap3({
                                 infowindow:{
-                                    anchor:marker, 
+                                    anchor:marker,
                                     options:{content: context.data}
                                 }
                             });
@@ -16247,8 +16248,19 @@ $.fn.gmap3 = function () {
                 }
             }
         });
-        
+
     });
-          
+
 })(jQuery);
 
+
+
+jQuery(document).ready(function($) {
+    $(".header .navbar-toggler").on("click", function() {
+        $(this).hasClass("collapsed") ? ($(this).find("small").text("CLOSE"),
+        $(this).find(".open").addClass("d-none"),
+        $(this).find(".close").removeClass("d-none")) : ($(this).find("small").text("MENU"),
+        $(this).find(".open").removeClass("d-none"),
+        $(this).find(".close").addClass("d-none"))
+    })
+});
