@@ -11,24 +11,32 @@
         padding: $space*3 $space;
         color: $white;
         @include breakpoint(medium) {
-           padding-left: $space*3; 
+           padding-left: $space*3;
            padding-right: $space*3;
         }
         &:nth-child(1) {
             background: $colorPrimary;
         }
         &:nth-child(2) {
-            background: lighten($colorPrimary, 2%);
+            background: lighten($colorPrimary, 4%);
         }
         &:nth-child(3) {
-            background: lighten($colorPrimary, 4%);
+            background: $colorPrimary;
         }
     }
     .icon {
         font-size: 2rem;
         color: $white;
+        position: static;
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        -moz-transition: all 0.2s ease-in-out 0s;
+        -ms-transition: all 0.2s ease-in-out 0s;
+        -o-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s;
+
     }
     h3 {
+        margin-top: 20px;
         color: $white;
     }
     ul {
@@ -39,6 +47,17 @@
         width: 100%;
         td:last-child {
             @extend %align-right;
+        }
+    }
+    .col-lg-4 {
+        ul li, tr td, p {
+            color: rgba(255,255,255,.75);
+        }
+        &:hover .icon {
+            -webkit-transform: translateY(-18px);
+            -ms-transform: translateY(-18px);
+            -o-transform: translateY(-18px);
+            transform: translateY(-18px);
         }
     }
 }
