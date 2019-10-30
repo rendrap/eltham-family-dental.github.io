@@ -34,3 +34,29 @@ img {
 .map {
     height: 450px;
 }
+
+.section {
+  padding: 35px 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 90px 0;
+  }
+
+  &.section-sm {
+    @include media-breakpoint-up(lg) {
+      padding: 45px 0;
+    }
+  }
+
+  &.section-md {
+    @include media-breakpoint-up(lg) {
+      padding: 75px 0;
+    }
+  }
+
+  &.section-lg {
+    @include media-breakpoint-up(lg) {
+      padding: 135px 0;
+    }
+  }
+}

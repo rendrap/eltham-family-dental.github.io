@@ -1,0 +1,33 @@
+/* SECTION VISION
+-------------------------------------------------*/
+.section-vision {
+	[class*="col-"] {
+		overflow: hidden;
+	}
+
+	img {
+		width: auto;
+		max-width: none;
+		height: 170px;
+
+		@include media-breakpoint-up(lg) {
+			height: 250px;
+		}
+	}
+}
+
+.grey-lighter {
+    color: #ECEBEA
+}
+
+.bg-grey-lighter {
+    background-color: #ECEBEA
+}
+
+.grey-lightest {
+    color: #F2F2F2
+}
+
+.bg-grey-lightest {
+    background-color: #F2F2F2
+}
