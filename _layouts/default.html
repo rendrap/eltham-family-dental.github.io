@@ -37,12 +37,19 @@
             formMessage.classList.toggle('show');
             form.reset();
             grecaptcha.reset();
+            xhr = [];
             } else {
             formMessage.innerHTML = "Error: " + response.error;
             }
             };
             xhr.send(formData);
         };
+
+        var $alertMsg = $("#form-message");
+        $(".alert").on("close.bs.alert", function () {
+            $alertMsg.hide();
+            return false;
+        });
     </script>
 </body>
 </html>
