@@ -36,6 +36,7 @@
             formMessage.appendChild(success);
             formMessage.classList.toggle('show');
             form.reset();
+            grecaptcha.reset();
             } else {
             formMessage.innerHTML = "Error: " + response.error;
             }
