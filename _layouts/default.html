@@ -35,7 +35,7 @@
             verifyMessage.classList.add('d-none');
         }
 
-        if (isCaptchaValidated ) {
+
         form.onsubmit = function(event) {
             event.preventDefault();
             var formData = new FormData(form);
@@ -56,7 +56,6 @@
             };
             xhr.send(formData);
         };
-    };
 
         var $alertMsg = $("#form-message");
         $(".alert").on("close.bs.alert", function () {
