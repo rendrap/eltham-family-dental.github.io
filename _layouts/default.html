@@ -33,11 +33,12 @@
 
             var response = grecaptcha.getResponse();
             if(response.length == 0) {
-            verifyMessage.classList.remove('d-none');
+            verifyMessage.classList.remove('dismiss');
             return false;
             }
             else {
-                verifyMessage.alert('close');
+                // $('#verify').alert('close');
+                verifyMessage.classList.add('dismiss');
 
                 xhr.open("POST", form.action, true);
                 xhr.onload = function(e) {
@@ -59,7 +60,7 @@
         };
 
         var $alertMsg = $("#form-message");
-        $(".alert").on("close.bs.alert", function () {
+        $("#form-message").on("close.bs.alert", function () {
             $alertMsg.removeClass("show");
             return false;
         });
