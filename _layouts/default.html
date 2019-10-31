@@ -37,7 +37,7 @@
             return false;
             }
             else {
-                verifyMessage.classList.add('d-none');
+                verifyMessage.alert('close');
 
                 xhr.open("POST", form.action, true);
                 xhr.onload = function(e) {
