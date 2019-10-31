@@ -23,7 +23,8 @@
     <script type="text/javascript">
         var form = document.getElementById("my-contact-form");
         var formMessage = document.getElementById("form-message");
-        var success = document.createTextNode('Success')
+        var success = document.createTextNode('Success');
+        var widgetId = grecaptcha.render('capt');
         form.onsubmit = function(event) {
             event.preventDefault();
             var formData = new FormData(form);
