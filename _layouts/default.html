@@ -25,16 +25,12 @@
         var formMessage = document.getElementById("form-message");
         var verifyMessage = document.getElementById("verify");
         var success = document.createTextNode('Success');
-        var isCaptchaValidated = false;
-        var response = grecaptcha.getResponse();
-        if(response.length == 0) {
-            isCaptchaValidated = false;
+
+        if (grecaptcha.getResponse() == ""){
             verifyMessage.classList.remove('d-none');
         } else {
-            isCaptchaValidated = true;
             verifyMessage.classList.add('d-none');
         }
-
 
         form.onsubmit = function(event) {
             event.preventDefault();
