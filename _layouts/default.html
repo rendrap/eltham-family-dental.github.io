@@ -24,7 +24,7 @@
         var form = document.getElementById("my-contact-form");
         var formMessage = document.getElementById("form-message");
         var success = document.createTextNode('Success');
-        var widgetId = grecaptcha.render('capt');
+        // var widgetId = grecaptcha.render('capt');
         form.onsubmit = function(event) {
             event.preventDefault();
             var formData = new FormData(form);
@@ -37,7 +37,7 @@
             formMessage.appendChild(success);
             formMessage.classList.toggle('show');
             form.reset();
-            grecaptcha.reset(widgetId);
+            // grecaptcha.reset(widgetId);
             } else {
             formMessage.innerHTML = "Error: " + response.error;
             }
