@@ -4,6 +4,19 @@
 	[class*="col-"] {
 		overflow: hidden;
 	}
+	[class*="bg-grey"] {
+		h5 {
+		color :$black;
+		font-size: 22px;
+
+			@include media-breakpoint-up(md) {
+			font-size: 28px;
+			}
+		}
+		p {
+		color :$black;
+		}
+	}
 
 	img {
 		width: auto;
@@ -19,7 +32,9 @@
 .grey-lighter {
     color: #ECEBEA
 }
-
+.grey-dark {
+    color: #434343;
+}
 .bg-grey-lighter {
     background-color: #ECEBEA
 }
