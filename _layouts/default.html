@@ -33,7 +33,6 @@
             console.log(xhr);
             var response = JSON.parse(xhr.response);
             if (xhr.status === 200) {
-            formMessage.innerHTML = "Success";
             formMessage.appendChild(success);
             formMessage.classList.toggle('show');
             } else {
