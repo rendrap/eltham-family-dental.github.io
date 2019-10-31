@@ -32,14 +32,15 @@
             var xhr = new XMLHttpRequest();
 
             var response = grecaptcha.getResponse();
-              if(response.length == 0)
-              {
-                //reCaptcha not verified
-                // alert("please verify you are humann!");
-                verifyMessage.classList.remove('d-none');
-                // evt.preventDefault();
-                return false;
-              }
+            if(response.length == 0)
+            {
+            //reCaptcha not verified
+            // alert("please verify you are humann!");
+            verifyMessage.classList.remove('d-none');
+            // evt.preventDefault();
+            return false;
+            }
+            verifyMessage.classList.remove('d-none');
 
             xhr.open("POST", form.action, true);
             xhr.onload = function(e) {
