@@ -12,6 +12,10 @@
 .font-weight-bold   { font-weight: $font-weight-bold !important; }
 .font-italic        { font-style: italic !important; }
 
+.font-size-medium {
+  font-size: 18px;
+}
+
 /* Headings & Paragraphs
 -------------------------------*/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
