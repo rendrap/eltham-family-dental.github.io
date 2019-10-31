@@ -35,6 +35,7 @@
             if (xhr.status === 200) {
             formMessage.innerHTML = "Success";
             formMessage.appendChild(success);
+            formMessage.classList.toggle('show');
             } else {
             formMessage.innerHTML = "Error: " + response.error;
             }
