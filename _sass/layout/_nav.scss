@@ -31,6 +31,13 @@
     background-color: #fff;
   }
 
+  .btn.btn-white {
+    background-color: #fff;
+    border-color: $colorPrimary;
+    color: #000;
+    font-weight: bold;
+  }
+
   .dropdown-toggle::after {
     border-top-color: $black;
   }
@@ -83,9 +90,9 @@
         }
       }
 
-      .btn {
-        margin-top: -3px;
-      }
+      // .btn {
+      //   margin-top: -3px;
+      // }
 
       > li:not(.menu-images) {
         .dropdown-menu {
