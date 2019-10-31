@@ -40,7 +40,7 @@
             // evt.preventDefault();
             return false;
             }
-            verifyMessage.classList.remove('d-none');
+            verifyMessage.classList.addClass('d-none');
 
             xhr.open("POST", form.action, true);
             xhr.onload = function(e) {
