@@ -1,5 +1,16 @@
 /* TYPOGRAPHY
 -------------------------------------------------*/
+@font-face {
+  font-family: 'century-gothic';
+  src: url($baseurl +'/css/CenturyGothicRegular.ttf') format('truetype');
+}
+
+// Weight and italics
+
+.font-weight-light  { font-weight: $font-weight-light !important; }
+.font-weight-normal { font-weight: $font-weight-normal !important; }
+.font-weight-bold   { font-weight: $font-weight-bold !important; }
+.font-italic        { font-style: italic !important; }
 
 /* Headings & Paragraphs
 -------------------------------*/

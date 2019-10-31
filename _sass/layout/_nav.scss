@@ -73,7 +73,7 @@
         &.menu-item-has-children > a {
           @include media-breakpoint-down(md) {
             padding-left: 18px;
-            background: url($baseurl +'svg/min/tip-down.svg') left center / 10px no-repeat;
+            background: url($baseurl +'/svg/min/tip-down.svg') left center / 10px no-repeat;
           }
 
           @include media-breakpoint-up(lg) {

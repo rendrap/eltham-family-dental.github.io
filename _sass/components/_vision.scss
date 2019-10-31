@@ -10,7 +10,7 @@
 		font-size: 22px;
 
 			@include media-breakpoint-up(md) {
-			font-size: 28px;
+			font-size: 26px;
 			}
 		}
 		p {
@@ -27,6 +27,10 @@
 			height: 250px;
 		}
 	}
+}
+
+.font-size-medium {
+  font-size: 18px;
 }
 
 .grey-lighter {
