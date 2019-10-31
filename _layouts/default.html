@@ -53,9 +53,9 @@
                     formMessage.innerHTML = "Error: " + response.error;
                     }
                 };
+                xhr.send(formData);
                 return true;
             }
-            xhr.send(formData);
         };
 
         var $alertMsg = $("#form-message");
