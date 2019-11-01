@@ -94,7 +94,7 @@
 #carousel-hero {
     img {
         object-fit: cover;
-        @include media-breakpoint-down(sm) { min-height: 500px; }
+        @include media-breakpoint-down(md) { min-height: 500px; }
     }
     .carousel-indicators li {
         background-color: $colorPrimary;
@@ -102,6 +102,32 @@
     .carousel-indicators {
         @include media-breakpoint-down(sm) {
             bottom: 90px;
+        }
+    }
+    .carousel-caption {
+        color: $black;
+        // top: 30%;
+        // left: 50%;
+        // right: 5%;
+        top: 0px;
+        left: 0;
+        bottom: 104px;
+        right: 0;
+        width: 50%;
+        margin-left: auto;
+        padding: 0;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        h1 { font-size: 52px; font-weight: 700; color: $black; align-content: center; }
+        @include media-breakpoint-down(sm) {
+            top: 78px;
+            h1 { font-size: 32px; }
+        }
+        @include media-breakpoint-down(md) { top: 78px; }
+        @include media-breakpoint-up(xl) { h1 { font-size: 72px; line-height:86px;} }
+        p {
+            font-size: 20px;
         }
     }
 }

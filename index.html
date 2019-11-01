@@ -15,7 +15,7 @@ layout: default
         <!--First slide-->
         <div class="carousel-item active">
             <img class="d-block w-100" src="{{site.baseurl}}/img/{{site.hero.hero_img_1}}" alt="First slide">
-            <div class="carousel-caption d-none d-md-block align-items-center">
+            <div class="carousel-caption align-items-center">
                 <h1>A Medical Care<br>You Can Trust</h5>
             </div>
         </div>
@@ -23,7 +23,7 @@ layout: default
         <!--Second slide-->
         <div class="carousel-item">
             <img class="lazyload d-block w-100" data-src="{{site.baseurl}}/img/{{site.hero.hero_img_2}}" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block align-items-center">
+            <div class="carousel-caption align-items-center">
                 <h1>High-quality Services</h1>
                 <p>Providing dental needs for Eltham and surrounding areas</p>
             </div>
@@ -32,34 +32,33 @@ layout: default
         <!--Third slide-->
         <div class="carousel-item">
             <img class="lazyload d-block w-100" data-src="{{site.baseurl}}/img/{{site.hero.hero_img_3}}" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block align-items-center">
-                <h1>Visit us for quality dental care at affordable rates.</h1>
+            <div class="carousel-caption align-items-center">
+                <h1>Book Appointment Now</h1>
             </div>
         </div>
         <!--/Third slide-->
-
         <!--Bottom Text-->
         <div class="hero-content">
-                <div class="container-fluid">
-                    <div class="hero-content-inner">
-                        <h1>Eltham Family Dental</h1>
-                        <p>Call now to book an appointment</p>
-                    </div>
+            <div class="container-fluid">
+                <div class="hero-content-inner">
+                    <h1>Eltham Family Dental</h1>
+                    <p>Call now to book an appointment</p>
                 </div>
             </div>
+        </div>
         <!--/Bottom Text-->
-
     </div>
     <!--/.Slides-->
     {% include widget.html %}
 </div>
 <!--/.Carousel Wrapper-->
-
 <!-- Start 3 columns -->
 <div class="container">
     <div class="row three-shade-col shadow">
         <div class="col-lg-4 col-md-4 col-sm-12 box-shadow">
-            <svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>
+            <svg class="icon icon-envelope-o">
+                <use xlink:href="#icon-envelope-o"></use>
+            </svg>
             <h3>Contact Us</h3>
             <ul>
                 {% if site.contact.phone %}<li><strong>Phone:</strong> {{ site.contact.phone }}</li>{% endif %}
@@ -68,7 +67,9 @@ layout: default
             </ul>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12 box-shadow2">
-            <svg class="icon icon-clock-o"><use xlink:href="#icon-clock-o"></use></svg>
+            <svg class="icon icon-clock-o">
+                <use xlink:href="#icon-clock-o"></use>
+            </svg>
             <h3>Opening Hours</h3>
             <table>
                 <tbody>
@@ -88,16 +89,17 @@ layout: default
             </table>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12 box-shadow">
-            <svg class="icon icon-map-marker"><use xlink:href="#icon-map-marker"></use></svg>
+            <svg class="icon icon-map-marker">
+                <use xlink:href="#icon-map-marker"></use>
+            </svg>
             <h3>Location</h3>
-                <p>
-                    {{ site.contact.address }}
-                </p>
+            <p>
+                {{ site.contact.address }}
+            </p>
         </div>
     </div>
 </div>
 <!-- End 3 columns -->
-
 <!-- Start Section-vision -->
 <div id="offer" class="section section-vision mt-5">
     <div class="container">
@@ -159,49 +161,51 @@ layout: default
     </div>
 </div>
 <!-- End Section-vision -->
-
 <!-- Start Treatments -->
 <div id="treatments" class="treatments">
     <div class="container-fluid">
         <h2 class="section-title">Treatments</h2>
-
         <div class="row">
             {% for treatment in site.data.treatments %}
-                <div class="col-sm-6 col-md-4">
-                    <div class="icon-box">
-                        <svg class="icon {{ treatment.icon }}"><use xlink:href="#{{ treatment.icon }}"></use></svg>
-                        <h4>{{ treatment.title }}</h4>
-                        <p>{{ treatment.description }}</p>
-                    </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="icon-box">
+                    <svg class="icon {{ treatment.icon }}">
+                        <use xlink:href="#{{ treatment.icon }}"></use>
+                    </svg>
+                    <h4>{{ treatment.title }}</h4>
+                    <p>{{ treatment.description }}</p>
                 </div>
+            </div>
             {% endfor %}
         </div>
     </div>
 </div>
 <!-- End Treatments -->
-
 <!-- Start Our team -->
 <div id="team" class="team">
     <h2 class="section-title">Our Team</h2>
     <div id="team-carousel">
-    {% for member in site.data.team %}
+        {% for member in site.data.team %}
         <div class="expandable-box">
             <div class="expandable-box-top">
                 <img src="{{ site.baseurl }}/img/{{ member.image }}" alt="{{ member.name }}">
                 <h4>{{ member.name }}</h4>
             </div>
             <div class="expandable-box-bottom">
-                <a href="mailto:{{ member.email }}" data-toggle="tooltip" data-placement="bottom" title="{{ member.email }}"><svg class="icon icon-envelope"><use xlink:href="#icon-envelope"></use></svg></a>
+                <a href="mailto:{{ member.email }}" data-toggle="tooltip" data-placement="bottom" title="{{ member.email }}"><svg class="icon icon-envelope">
+                        <use xlink:href="#icon-envelope"></use>
+                    </svg></a>
                 </a>
-                <a href="tel:{{ member.phone }}" data-toggle="tooltip" data-placement="bottom" title="{{ member.phone }}"><svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg></a>
+                <a href="tel:{{ member.phone }}" data-toggle="tooltip" data-placement="bottom" title="{{ member.phone }}"><svg class="icon icon-phone">
+                        <use xlink:href="#icon-phone"></use>
+                    </svg></a>
                 </a>
             </div>
         </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 </div>
 <!-- End Our team -->
-
 <!-- Start Testimonials -->
 <div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
     <div class="overlay-container">
@@ -209,42 +213,41 @@ layout: default
         <div class="container-fluid">
             <div id="testimonial-carousel">
                 {% for testimonial in site.data.testimonials %}
-                    <div class="testimonial-item">
-                        <svg class="icon icon-quote-left"><use xlink:href="#icon-quote-left"></use></svg>
-                        <blockquote>
-                            <p>{{ testimonial.description }}</p>
-                            <footer>
-                                {{ testimonial.name }}
-                                <small>{{ testimonial.title }}</small>
-                            </footer>
-                        </blockquote>
-                    </div>
+                <div class="testimonial-item">
+                    <svg class="icon icon-quote-left">
+                        <use xlink:href="#icon-quote-left"></use>
+                    </svg>
+                    <blockquote>
+                        <p>{{ testimonial.description }}</p>
+                        <footer>
+                            {{ testimonial.name }}
+                            <small>{{ testimonial.title }}</small>
+                        </footer>
+                    </blockquote>
+                </div>
                 {% endfor %}
             </div>
         </div>
     </div>
 </div>
 <!-- End Testimonials -->
-
 <!-- Start Gallery -->
 <div id="gallery" class="gallery">
-
     <h2 class="section-title">Gallery</h2>
-
     {% for images in site.data.gallery %}
-        <a href="{{ site.baseurl }}/img/gallery/large/{{ images.image_large }}" class="gallery-item expandable-box image-link">
-            <div class="expandable-box-top">
-                <img src="{{ site.baseurl }}/img/gallery/thumb/{{ images.image_thumb }}" alt="{{ images.image_alt }}">
-            </div>
-            <div class="expandable-box-bottom">
-                <span><svg class="icon icon-chain"><use xlink:href="#icon-chain"></use></svg></span>
-            </div>
-        </a>
+    <a href="{{ site.baseurl }}/img/gallery/large/{{ images.image_large }}" class="gallery-item expandable-box image-link">
+        <div class="expandable-box-top">
+            <img src="{{ site.baseurl }}/img/gallery/thumb/{{ images.image_thumb }}" alt="{{ images.image_alt }}">
+        </div>
+        <div class="expandable-box-bottom">
+            <span><svg class="icon icon-chain">
+                    <use xlink:href="#icon-chain"></use>
+                </svg></span>
+        </div>
+    </a>
     {% endfor %}
-
 </div>
 <!-- End Gallery -->
-
 <!-- Start Map -->
 <div id="location" class="map" data-zoom="{{ site.map.zoom }}" data-address="{{ site.map.address }}" data-address-details="<img src='{{ site.map.address_details }}'>"></div>
 <!-- End Map -->
