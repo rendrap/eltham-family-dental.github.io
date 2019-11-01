@@ -20,54 +20,6 @@
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="{{ "/js/all.min.js" | relative_url }}"></script>
-    <script type="text/javascript">
-        var form = document.getElementById("my-contact-form");
-        var formMessage = document.getElementById("form-message");
-        var verifyMessage = document.getElementById("verify");
-        var success = document.createTextNode('Success');
 
-        form.onsubmit = function(event) {
-            event.preventDefault();
-            var formData = new FormData(form);
-            var xhr = new XMLHttpRequest();
-
-            var response = grecaptcha.getResponse();
-            if(response.length == 0) {
-            verifyMessage.classList.remove('dismiss');
-            return false;
-            }
-            else {
-                // $('#verify').alert('close');
-                verifyMessage.classList.add('dismiss');
-
-                xhr.open("POST", form.action, true);
-                xhr.onload = function(e) {
-                    console.log(xhr);
-                    var response = JSON.parse(xhr.response);
-                    if (xhr.status === 200) {
-                    formMessage.appendChild(success);
-                    formMessage.classList.toggle('show');
-                    form.reset();
-                    grecaptcha.reset();
-                    xhr = [];
-                    } else {
-                    formMessage.innerHTML = "Error: " + response.error;
-                    }
-                };
-                xhr.send(formData);
-                return true;
-            }
-        };
-
-        var $alertMsg = $("#form-message");
-        $("#form-message").on("close.bs.alert", function () {
-            $alertMsg.removeClass("show");
-            return false;
-        });
-
-        $('.carousel').carousel({
-            interval: {{site.carousel-interval}}
-        })
-    </script>
 </body>
 </html>

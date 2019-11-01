@@ -87,3 +87,14 @@
 .block.livicon {
     margin-left: 0 !important;
 }
+
+// Carousel
+#carousel-hero {
+    img {
+        object-fit: cover;
+    }
+    .carousel-indicators li {
+        background-color: $colorPrimary;
+    }
+}
+
