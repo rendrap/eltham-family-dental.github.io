@@ -16,6 +16,7 @@
 .hero-content {
     padding: $space 0;
     background: rgba($white, 0.7);
+    z-index: 1;
     @include breakpoint(small) {
         position: absolute;
         bottom: 0;
@@ -82,6 +83,9 @@
     background-color: $colorPrimary;
     padding: 10px;
     z-index:1;
+    @include media-breakpoint-down(md) {
+        top: 78px;
+    }
 }
 
 .block.livicon {
@@ -92,6 +96,7 @@
 #carousel-hero {
     img {
         object-fit: cover;
+        @include media-breakpoint-down(sm) { min-height: 500px; }
     }
     .carousel-indicators li {
         background-color: $colorPrimary;
