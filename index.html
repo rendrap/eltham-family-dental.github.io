@@ -1,52 +1,37 @@
 ---
 layout: default
 ---
-
-<!-- Start Hero -->
-<div class="hero" style="background: url('{{ site.baseurl }}/img/{{ site.hero.hero_img }}') no-repeat; background-size: cover;">
-    <div class="hero-content">
-        <div class="container-fluid">
-            <div class="hero-content-inner">
-                <h1>{{ site.hero.hero_title }}</h1>
-                <p>{{ site.hero.hero_description }}</p>
-            </div>
+<!--Carousel Wrapper-->
+<div id="carousel-hero" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-hero" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-hero" data-slide-to="1"></li>
+        <li data-target="#carousel-hero" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        <!--First slide-->
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{{site.baseurl}}/img/{{site.hero.hero_img_1}}" alt="First slide">
         </div>
-    </div>
-
-    <div class="container-fluid">
-
-        <div class="col col-sm-6 offset-sm-6 col-md-4 offset-md-8 form">
-            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Make an Appointment</h3>
-            <form action="https://usebasin.com/f/96e703207022" method="post" accept-charset="UTF-8" id="my-contact-form">
-                <div class="form-field">
-                    <input name="name" type="text" placeholder="Name" required>
-                </div>
-                <div class="form-field">
-                    <input name="phone" type="tel" placeholder="Phone" required>
-                </div>
-                <div class="form-field">
-                    <input name="email" type="email" placeholder="Email" required>
-                </div>
-                <div class="form-field">
-                    <textarea name="comments" placeholder="Message" required></textarea>
-                </div>
-                <div class="form-field d-none">
-                    <input type="hidden" name="_gotcha"><input>
-                </div>
-                <div id="capt" class="g-recaptcha form-field" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
-                <input type="submit" class="btn btn-default form-field" value="Send">
-                <div id="verify" class="alert alert-danger dismiss" role="alert">Please verify reCAPTCHA</div>
-                <div id="form-message" class="alert alert-success alert-dismissible fade" role="alert">
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-            </form>
+        <!--/First slide-->
+        <!--Second slide-->
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{site.baseurl}}/img/{{site.hero.hero_img_2}}" alt="Second slide">
         </div>
-
+        <!--/Second slide-->
+        <!--Third slide-->
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{site.baseurl}}/img/{{site.hero.hero_img_3}}" alt="Third slide">
+        </div>
+        <!--/Third slide-->
     </div>
+    <!--/.Slides-->
+    {% include widget.html %}
 </div>
-<!-- End Hero -->
+<!--/.Carousel Wrapper-->
 
 <!-- Start 3 columns -->
 <div class="container">

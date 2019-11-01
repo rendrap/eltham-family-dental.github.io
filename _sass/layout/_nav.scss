@@ -28,7 +28,7 @@
     z-index: 1021;
 
     @include media-breakpoint-down(md) {
-        position: fixed;
+        // position: fixed;
         width: 100%;
         background-color: #fff;
     }

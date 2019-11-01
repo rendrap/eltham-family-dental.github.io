@@ -7,9 +7,12 @@ logo_url: svg/min/logo.svg
 
 # Hero
 hero:
-    hero_img: hero.jpg
+    hero_img_1: hero_1.jpg
+    hero_img_2: hero_2.jpg
+    hero_img_3: hero_3.jpg
     hero_title: Eltham Family Dental
     hero_description: Call now to book an appointment
+carousel-interval: 4000
 
 # Contact form
 api_token: # Enter API token here

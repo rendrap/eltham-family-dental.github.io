@@ -74,3 +74,16 @@
     background-color: #3dadb2;
     border-color: #3dadb2
 }
+
+.book-placement {
+    position: absolute;
+    top:0;
+    right:0;
+    background-color: $colorPrimary;
+    padding: 10px;
+    z-index:1;
+}
+
+.block.livicon {
+    margin-left: 0 !important;
+}
