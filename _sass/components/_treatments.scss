@@ -11,11 +11,113 @@
     }
     [class^="col-"] {
         @include breakpoint(small) {
-            display: flex; 
+            display: flex;
         }
     }
     .icon {
         font-size: 1.5rem;
         color: $colorPrimary;
     }
+}
+
+
+.dropdown-card {
+  font-size: 14px;
+
+  .dropdown-menu {
+    border-top: 0;
+    padding: 20px;
+    border-color: $colorPrimary;
+    border-radius: 38px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-top: -1px;
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    text-decoration: none;
+    font-size: 15px;
+    width: 100%;
+    padding: 12px 25px 12px 70px;
+    display: block;
+    border: 1px solid #DEDEDE;
+    border-radius: 38px;
+    height: 56px;
+    position: relative;
+    line-height: 1.9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: none;
+    h4 { line-height: 1.9;font-weight:bold; }
+
+    @include media-breakpoint-up(lg) {
+      padding: 22px 25px 22px 70px;
+      height: 76px;
+    }
+
+    svg {
+      height: 30px;
+      width: auto;
+      max-width: 40px;
+      position: absolute;
+      left: 20px;
+      top: 12px;
+
+      @include media-breakpoint-up(lg) {
+        top: 22px;
+      }
+    }
+
+    &:after {
+      width: 16px;
+      height: 9px;
+      border: 0;
+      background: url($baseurl + '/svg/min/chev-down.svg') center / contain no-repeat;
+      transition: all .25s ease-in-out 0s;
+      position: absolute;
+      right: 20px;
+      top: 22px;
+
+      @include media-breakpoint-up(lg) {
+        top: 32px;
+      }
+    }
+
+    &.no-dropdown {
+      pointer-events: none;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  &.dropdown-card-rounded {
+    .dropdown-toggle,
+    .dropdown-menu {
+      border-radius: 4px;
+    }
+  }
+
+  &.show {
+    .dropdown-toggle {
+      border-color: $colorPrimary;
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.dropdown-card-rounded {
+      .dropdown-menu {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+    }
+  }
 }

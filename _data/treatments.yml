@@ -1,23 +1,31 @@
 - icon: icon-user-md
-  title: Invisible braces
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam minima, itaque molestiae ut ratione unde?
+  title: Teeth Straightening
+  description: At Eltham Family Dental we provide various orthodontic services. Invisalign® is a custom-made aligner that is interchanged roughly every two weeks for a period of six to eighteen months, or longer depending on the severity of misalignment. Fastbraces® Technology is an innovative orthodontic treatment, specially designed to move teeth fast and efficiently with gentle forces giving beautiful, straight teeth in a matter of months… not years!
 
 - icon: icon-diamond
   title: Cosmetic Dentistry
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam minima, itaque molestiae ut ratione unde?
+  description: We can help you with veneers, crowns and bridges, implants and laser assisted dentistry.
 
 - icon: icon-flask
   title: Stain removal
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+  description: Smartbleach® teeth whitening uses a unique and patented process that combines pure green light and a specially formulated red gel to create a photodynamic teeth whitening treatment that is highly effective yet gentle on the tooth enamel.
 
 - icon: icon-globe
-  title: Dentures
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam minima, itaque molestiae ut ratione unde?
+  title: General dentistry
+  description: Check up which involves a thorough examination of your teeth, gums and mouth, will prevent minor problems from becoming major ones. We recommend six monthly check ups, which when supported by a good at-home routine, will help to keep your mouth healthy.
 
 - icon: icon-ambulance
-  title: Emergency Calls
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam minima, itaque molestiae ut ratione unde?
+  title: Emergency Dental
+  description: We always keep aside slots for emergencies, please give us a call during our offices hours to book an appointment.
 
-- icon: icon-bed
-  title: Sedation
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam minima, itaque molestiae ut ratione unde?
+- icon: icon-star
+  title: Kids friendly dental
+  description: Being next to primary schools we see lots of kids at our clinic. Our friendly team members ensure that your kids have a pleasent experience everytime they are at the dentist. Have a chat to Dr Indu, herself being a mother of two kids, is quite well known among our younger patients.
+
+- icon: icon-group
+  title: Seniors
+  description: Our clinic has been operating at Eltham for the last 30+ years. A large number of our patients have grown up alongside us through regular visits. We understand your needs and can help you with all your dental treatments.
+
+- icon: icon-hospital-o
+  title: Facilities
+  description: We are located right across Eltham Terrace shopping centre with ample onsite parking. On the spot claiming is available for medicare and health funds at our clinic.

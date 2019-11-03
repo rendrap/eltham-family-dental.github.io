@@ -161,26 +161,32 @@ layout: default
     </div>
 </div>
 <!-- End Section-vision -->
+
 <!-- Start Treatments -->
 <div id="treatments" class="treatments">
-    <div class="container-fluid">
-        <h2 class="section-title">Treatments</h2>
+    <div class="container">
+        <h2 class="section-title grey-dark font-weight-bold">Treatments</h2>
         <div class="row">
             {% for treatment in site.data.treatments %}
-            <div class="col-sm-6 col-md-4">
-                <div class="icon-box">
-                    <svg class="icon {{ treatment.icon }}">
-                        <use xlink:href="#{{ treatment.icon }}"></use>
-                    </svg>
-                    <h4>{{ treatment.title }}</h4>
-                    <p>{{ treatment.description }}</p>
+                <div class="col-lg-6 col-xl-4 mb-2 mb-lg-4">
+                    <div class="dropdown dropdown-card w-100">
+                      <a class="dropdown-toggle font-weight-bold " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-display="static">
+                        <svg class="icon {{ treatment.icon }}">
+                            <use xlink:href="#{{ treatment.icon }}"></use>
+                        </svg>
+                        <h4 class="grey-dark">{{ treatment.title }}</h4>
+                     </a>
+                        <div class="dropdown-menu">
+                            <p>{{ treatment.description }}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>
 </div>
 <!-- End Treatments -->
+
 <!-- Start Our team -->
 <div id="team" class="team">
     <h2 class="section-title">Our Team</h2>
