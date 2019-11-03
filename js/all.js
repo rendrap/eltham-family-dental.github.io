@@ -13245,9 +13245,27 @@ $.fn.gmap3 = function () {
 jQuery(document).ready(function($) {
     $(".header .navbar-toggler").on("click", function() {
         $(this).hasClass("collapsed") ? ($(this).find("small").text("CLOSE"),
-        $(this).find(".open").addClass("d-none"),
-        $(this).find(".close").removeClass("d-none")) : ($(this).find("small").text("MENU"),
-        $(this).find(".open").removeClass("d-none"),
-        $(this).find(".close").addClass("d-none"))
+            $(this).find(".open").addClass("d-none"),
+            $(this).find(".close").removeClass("d-none")) : ($(this).find("small").text("MENU"),
+            $(this).find(".open").removeClass("d-none"),
+            $(this).find(".close").addClass("d-none"))
     })
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function() {
+        $('#back-to-top').tooltip('hide');
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+
+    $('#back-to-top').tooltip('show');
 });
