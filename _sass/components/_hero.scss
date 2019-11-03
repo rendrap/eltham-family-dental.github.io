@@ -106,9 +106,6 @@
     }
     .carousel-caption {
         color: $black;
-        // top: 30%;
-        // left: 50%;
-        // right: 5%;
         top: 0px;
         left: 0;
         bottom: 104px;
@@ -119,16 +116,19 @@
         display:flex;
         justify-content: center;
         flex-direction: column;
-        h1 { font-size: 52px; font-weight: 700; color: $black; align-content: center; }
-        @include media-breakpoint-down(sm) {
-            top: 78px;
-            h1 { font-size: 32px; }
-        }
-        @include media-breakpoint-down(md) { top: 78px; }
-        @include media-breakpoint-up(xl) { h1 { font-size: 72px; line-height:86px;} }
         p {
             font-size: 20px;
         }
+        h1 { font-size: 52px; font-weight: 700; color: $black; align-content: center; }
+        @include media-breakpoint-down(sm) {
+            top: 78px;
+            right: 5px;
+            width: 60%;
+            h1 { font-size: 28px; }
+            p { font-size: 14px; }
+        }
+        @include media-breakpoint-down(md) { top: 78px; }
+        @include media-breakpoint-up(xl) { h1 { font-size: 72px; line-height:86px;} }
     }
 }
 
