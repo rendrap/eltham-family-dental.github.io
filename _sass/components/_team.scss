@@ -3,6 +3,7 @@
 .team {
     @extend %clearfix;
     @extend %space;
+    @include media-breakpoint-down(md) { padding-top: 120px; }
     overflow: hidden;
     color: $white;
     background: lighten($colorPrimary, 2%);
