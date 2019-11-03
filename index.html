@@ -100,68 +100,32 @@ layout: default
     </div>
 </div>
 <!-- End 3 columns -->
-<!-- Start Section-vision -->
+<!-- Start Section-vision / What Can We Offer -->
 <div id="offer" class="section section-vision mt-5">
     <div class="container">
         <h2 class="text-center mb-5 font-weight-bold grey-dark">What Can We Offer</h2>
         <div class="row pt-4 px-3 px-lg-0">
+
+            {% for vision in site.data.visions %}
             <div class="col-md-6 col-lg-3 bg-grey-lightest">
                 <div class="row align-items-center">
-                    <div class="col-4 col-lg-12"> <img class="lazyload" data-src="https://www.eyecareplus.com.au/wp-content/uploads/2019/02/img3.jpg" alt="Image" style="margin-left: -30px;"></div>
+                    <div class="col-4 col-lg-12"> <img class="lazyload" data-src="{{ site.baseurl }}/img/{{ vision.image }}" alt="Image" style="margin-left: -30px;"></div>
                     <div class="col-8 col-lg-12">
-                        <div class="p-3 balance-elements">
-                            <h5 class="font-weight-bold mb-4">Locals caring for locals</h5>
+                        <div class="p-3">
+                            <h5 class="font-weight-bold mb-4">{{ vision.title }}</h5>
                             <div class="font-size-medium mb-4 mb-md-0">
-                                <p>Eyecare Plus practices are independently owned and we are proud to work in, and support, our local communities.</p>
+                                <p>{{ vision.description }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3 bg-grey-lighter">
-                <div class="row align-items-center">
-                    <div class="col-4 col-lg-12"> <img class="lazyload" data-src="https://www.eyecareplus.com.au/wp-content/uploads/2019/02/img4.jpg" alt="Image" style="margin-left: -30px;"></div>
-                    <div class="col-8 col-lg-12">
-                        <div class="p-3 balance-elements">
-                            <h5 class="font-weight-bold mb-4">Checkup Plus™ eye examinations</h5>
-                            <div class="font-size-medium mb-4 mb-md-0">
-                                <p>Checkup Plus™ is more than just an eye test. We take the time needed to give you a thorough eye examination.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 bg-grey-lightest">
-                <div class="row align-items-center">
-                    <div class="col-4 col-lg-12"> <img class="lazyload" data-src="https://www.eyecareplus.com.au/wp-content/uploads/2019/02/img5.jpg" alt="Image" style="margin-left: -100px;"></div>
-                    <div class="col-8 col-lg-12">
-                        <div class="p-3 balance-elements">
-                            <h5 class="font-weight-bold mb-4">20/20 optical technology</h5>
-                            <div class="font-size-medium mb-4 mb-md-0">
-                                <p>We are equipped with industry leading technology to accurately assess your eye health.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 bg-grey-lighter">
-                <div class="row align-items-center">
-                    <div class="col-4 col-lg-12"> <img class="lazyload" data-src="https://www.eyecareplus.com.au/wp-content/uploads/2019/02/img6.jpg" alt="Image" style="margin-left: 0px;"></div>
-                    <div class="col-8 col-lg-12">
-                        <div class="p-3 balance-elements">
-                            <h5 class="font-weight-bold mb-4">An eye for quality and value</h5>
-                            <div class="font-size-medium mb-4 mb-md-0">
-                                <p>We are focused on providing personalised, high quality services and great value for money.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+
         </div>
     </div>
 </div>
 <!-- End Section-vision -->
-
 <!-- Start Treatments -->
 <div id="treatments" class="treatments">
     <div class="container">
