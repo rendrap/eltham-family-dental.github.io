@@ -1,8 +1,17 @@
 /* ABOUT
 -------------------------------------------------*/
 .about {
-    @extend %space;
-    .media {
-        margin-bottom: $space;
-    }
+	p { font-size: 18px; }
+	h3 { font-size: 22px; }
+	@extend %space;
+	.media {
+		margin-bottom: $space;
+	}
+	@include media-breakpoint-down(md) { padding-top: 120px; }
+}
+
+.media-left {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 10px;
 }
