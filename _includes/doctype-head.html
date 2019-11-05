@@ -8,17 +8,19 @@
     {% if site.google-verification %}
     <meta name="google-site-verification" content="{{ site.google_verification }}">
     {% endif %}
-
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
     <script src="{{ "/js/lazysizes.min.js" | relative_url }}" async=""></script>
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
 
     <!-- Stylesheet -->
-    <style>
+    <!-- <style> -->
+        {% comment %}
     {% include critical.css %}
-    </style>
-    <link rel="stylesheet" href="{{ "/css/uncritical.css" | relative_url }}">
+        {% endcomment %}
+    <!-- </style> -->
+    <!-- <link rel="stylesheet" href="{{ "/css/uncritical.css" | relative_url }}"> -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ "/favicon.png" | relative_url }}">
