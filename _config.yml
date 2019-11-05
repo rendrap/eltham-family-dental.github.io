@@ -61,7 +61,9 @@ exclude: [
     .sass-cache,
     Gemfile,
     Gemfile.lock,
-    .gitignore
+    .gitignore,
+    _gulp,
+    _critical
 ]
 
 # Theme Settings
