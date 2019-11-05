@@ -3,6 +3,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+
         concat: {
             options: {
                 separator: "\n\n"
@@ -97,6 +98,7 @@ module.exports = function (grunt) {
                 livereload: true
             }
         }
+
     });
 
     require("load-grunt-tasks")(grunt);

@@ -67,3 +67,6 @@ exclude: [
 # Theme Settings
 analytics:
 google_verification:
+
+sass:
+    style: compressed
