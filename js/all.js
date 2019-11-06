@@ -13300,8 +13300,8 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 200);
     }
 
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
+    document.addEventListener("scroll", lazyload,{passive: true});
+    window.addEventListener("resize", lazyload,{passive: true});
+    window.addEventListener("orientationChange", lazyload,{passive: true});
   }
 })
