@@ -100,6 +100,7 @@ layout: default
     </div>
 </div>
 <!-- End 3 columns -->
+
 <!-- Start Section-vision / What Can We Offer -->
 <div id="offer" class="section section-vision mt-5">
     <div class="container">
@@ -109,7 +110,13 @@ layout: default
             {% for vision in site.data.visions %}
             <div class="col-md-6 col-lg-3 bg-grey-lightest">
                 <div class="row align-items-center">
-                    <div class="col-4 col-lg-12"> <img class="lazyload" data-src="{{ site.baseurl }}/img/{{ vision.image }}" alt="Image" style="margin-left: -30px;"></div>
+                    <div class="col-4 col-lg-12">
+                        <picture>
+                            <source class="lazyload" type="image/webp" data-srcset="{{ site.baseurl }}/img/{{ vision.image-webp }}" style="margin-left: -30px;">
+                            <source class="lazyload" type="image/jpeg" data-srcset="{{ site.baseurl }}/img/{{ vision.image }}" style="margin-left: -30px;">
+                            <img class="lazyload" data-src="{{ site.baseurl }}/img/{{ vision.image }}" alt="Image" style="margin-left: -30px;">
+                        </picture>
+                    </div>
                     <div class="col-8 col-lg-12">
                         <div class="p-3">
                             <h5 class="font-weight-bold mb-4">{{ vision.title }}</h5>
