@@ -9,7 +9,7 @@ module.exports = function (grunt) {
                 separator: "\n\n"
             },
             dist: {
-                src: ['js/bootstrap.bundle.js', 'js/jquery.magnific-popup.js', 'js/gmap3.js', 'js/custom.js','js/main.min.js'],
+                src: ['js/bootstrap.bundle.js', 'js/jquery.magnific-popup.js', 'js/gmap3.min.js', 'js/custom.js','js/main.min.js'],
                 dest: 'js/all.js'
             }
         },
