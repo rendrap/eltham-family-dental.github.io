@@ -26,7 +26,9 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ "/favicon.png" | relative_url }}">
+    {% if page.name == 'contact.html' %}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    {% endif %}
     <!-- Prevent google map to call google font -->
     <script>var head=document.getElementsByTagName("head")[0],insertBefore=head.insertBefore;head.insertBefore=function(e,o){e.href&&e.href.indexOf("//fonts.googleapis.com/css?family=Roboto")>-1?console.info("Prevented Roboto from loading!"):insertBefore.call(head,e,o)};</script>
 
