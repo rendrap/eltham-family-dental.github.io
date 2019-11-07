@@ -41,16 +41,24 @@
     /* Google Map
     ----------------------------------------------*/
      (function($) {
+        var logo = {
+            url: "{{ site.map.address_details }}",
+            size: new google.maps.Size(300, 133),
+            scaledSize: new google.maps.Size(90, 39),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(45, 80),
+        };
         $('.map')
         .gmap3({
             address: "{{ site.map.address }}",
             zoom: {{ site.map.zoom }},
             mapTypeId : google.maps.MapTypeId.ROADMAP
         })
-        .marker({
-            address: "{{ site.map.address }}",
-            animation: google.maps.Animation.DROP
-        });;
+        .marker([
+            {address: "{{ site.map.address }}", animation: google.maps.Animation.BOUNCE, icon: logo},
+            {address: "{{ site.map.address }}"}
+            ]);
+
     })(jQuery);
     </script>
 
