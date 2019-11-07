@@ -16,7 +16,50 @@
     {% endif %}
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script rel="preconnect" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0"></script>
+    <script>
+    var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('location'), {
+          zoom: 17
+        });
+        var geocoder = new google.maps.Geocoder();
+        codeAddress(geocoder, map);
+    }
+
+    function codeAddress(geocoder, resultsMap) {
+
+        //In this case it gets the address from an element on the page, but obviously you  could just pass it to the method instead
+        var address = "{{ site.map.address }}";
+
+        geocoder.geocode( { 'address' : address }, function( results, status ) {
+            if( status == google.maps.GeocoderStatus.OK ) {
+
+                var logo = {
+                    url: "{{ site.map.address_details }}",
+                    size: new google.maps.Size(300, 133),
+                    scaledSize: new google.maps.Size(90, 39),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(45, 80),
+                };
+                //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker( {
+                    map     : resultsMap,
+                    position: results[0].geometry.location,
+                    animation: google.maps.Animation.BOUNCE,
+                    icon: logo
+                });
+                var marker = new google.maps.Marker( {
+                    map     : resultsMap,
+                    position: results[0].geometry.location,
+                });
+            } else {
+                alert( 'Google Map was not successful for the following reason: ' + status );
+            }
+        } );
+    }
+    </script>
+    <script rel="preconnect" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0&callback=initMap"></script>
     {% if page.name == 'team.html' %}
     <script src="{{ "/js/owl.carousel.js" | relative_url }}"></script>
     <script>
@@ -37,29 +80,6 @@
     {% endif %}
 
     <script src="{{ "/js/all.min.js" | relative_url }}"></script>
-    <script>
-    /* Google Map
-    ----------------------------------------------*/
-     (function($) {
-        var logo = {
-            url: "{{ site.map.address_details }}",
-            size: new google.maps.Size(300, 133),
-            scaledSize: new google.maps.Size(90, 39),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(45, 80),
-        };
-        $('.map')
-        .gmap3({
-            address: "{{ site.map.address }}",
-            zoom: {{ site.map.zoom }},
-            mapTypeId : google.maps.MapTypeId.ROADMAP
-        })
-        .marker([
-            {address: "{{ site.map.address }}", animation: google.maps.Animation.BOUNCE, icon: logo},
-            {address: "{{ site.map.address }}"}
-            ]);
-    })(jQuery);
-    </script>
 
 </body>
 </html>
