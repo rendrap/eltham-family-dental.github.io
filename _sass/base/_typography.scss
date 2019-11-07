@@ -2,7 +2,9 @@
 -------------------------------------------------*/
 @font-face {
   font-family: 'century-gothic';
-  src: url($baseurl +'/css/CenturyGothicRegular.ttf') format('truetype');
+  src: local('Century Gothic'), local('CenturyGothic'),
+      url($baseurl +'/css/CenturyGothic.woff2') format('woff2'),
+      url($baseurl +'/css/CenturyGothicRegular.ttf') format('truetype');
   font-display: swap;
 }
 
