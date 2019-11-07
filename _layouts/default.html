@@ -15,27 +15,44 @@
         {% include analytics.html %}
     {% endif %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0"></script>
     {% if page.name == 'team.html' %}
     <script src="{{ "/js/owl.carousel.js" | relative_url }}"></script>
     <script>
-        /* Team slideshow
-        ----------------------------------------------*/
-        (function($) {
-            $("#team-carousel").owlCarousel({
+    /* Team slideshow
+    ----------------------------------------------*/
+    (function($) {
+        $("#team-carousel").owlCarousel({
 
-                autoPlay: 5000, //Set AutoPlay to 5 seconds
+            autoPlay: 5000, //Set AutoPlay to 5 seconds
 
-                items : 4,
-                itemsDesktopSmall : [979,3],
-                stopOnHover: true
+            items : 4,
+            itemsDesktopSmall : [979,3],
+            stopOnHover: true
+        });
 
-            });
-        })(jQuery);
+    })(jQuery);
     </script>
     {% endif %}
+
     <script src="{{ "/js/all.min.js" | relative_url }}"></script>
+    <script>
+    /* Google Map
+    ----------------------------------------------*/
+     (function($) {
+        $('.map')
+        .gmap3({
+            address: "{{ site.map.address }}",
+            zoom: {{ site.map.zoom }},
+            mapTypeId : google.maps.MapTypeId.ROADMAP
+        })
+        .marker({
+            address: "{{ site.map.address }}",
+            animation: google.maps.Animation.DROP
+        });;
+    })(jQuery);
+    </script>
 
 </body>
 </html>
