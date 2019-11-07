@@ -46,6 +46,10 @@
         	    border-radius: unset !important;
 	        }
 	    }
+        img {
+            object-fit: cover;
+            min-height: inherit;
+        }
     }
 
     .item {
@@ -70,6 +74,7 @@
 
     a {
         text-decoration: none;
+        &.item { padding: 0; }
     }
 
     [class*="arrow-"] {
