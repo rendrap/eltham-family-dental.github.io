@@ -109,6 +109,11 @@
     {% endif %}
 
     <script src="{{ "/js/all.min.js" | relative_url }}"></script>
+    <script type="text/javascript">
+     $(document).ready(function() {
+        $('.no-fouc').removeClass('no-fouc');
+     });
+    </script>
 
 </body>
 </html>
