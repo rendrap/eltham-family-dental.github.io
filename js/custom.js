@@ -9,7 +9,7 @@
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
-                $('html,body').animate({
+                $('html,body').velocity({
                     // scrollTop: target.offset().top-70
                     scrollTop: target.offset().top
                 }, 2000);
