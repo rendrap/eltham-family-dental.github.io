@@ -3,7 +3,7 @@
 
     /* Smooth scroll to section
     ----------------------------------------------*/
-    $('a.scroll[href*=#]:not([href=#])').click(function() {
+    $('a.scroll[href*=\\#]:not([href=\\#])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
             var target = $(this.hash);
