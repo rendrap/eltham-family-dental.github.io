@@ -49,7 +49,7 @@ skype: skype:obaez_design?userinfo
 feed: yes
 
 # Footer
-copyright: © 2019 Eltham Family Dental - All rights reserved
+copyright: © 2019<br /> Eltham Family Dental <br />All rights reserved
 
 # Build settings
 markdown: kramdown
