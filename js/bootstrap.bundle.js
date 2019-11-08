@@ -4447,241 +4447,6 @@
   };
 
   /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
-
-  var NAME$4 = 'tab';
-  var VERSION$4 = '4.3.1';
-  var DATA_KEY$4 = 'bs.tab';
-  var EVENT_KEY$4 = "." + DATA_KEY$4;
-  var DATA_API_KEY$4 = '.data-api';
-  var JQUERY_NO_CONFLICT$4 = $.fn[NAME$4];
-  var Event$4 = {
-    HIDE: "hide" + EVENT_KEY$4,
-    HIDDEN: "hidden" + EVENT_KEY$4,
-    SHOW: "show" + EVENT_KEY$4,
-    SHOWN: "shown" + EVENT_KEY$4,
-    CLICK_DATA_API: "click" + EVENT_KEY$4 + DATA_API_KEY$4
-  };
-  var ClassName$4 = {
-    DROPDOWN_MENU: 'dropdown-menu',
-    ACTIVE: 'active',
-    DISABLED: 'disabled',
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$4 = {
-    DROPDOWN: '.dropdown',
-    NAV_LIST_GROUP: '.nav, .list-group',
-    ACTIVE: '.active',
-    ACTIVE_UL: '> li > .active',
-    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
-    DROPDOWN_TOGGLE: '.dropdown-toggle',
-    DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Tab =
-  /*#__PURE__*/
-  function () {
-    function Tab(element) {
-      this._element = element;
-    } // Getters
-
-
-    var _proto = Tab.prototype;
-
-    // Public
-    _proto.show = function show() {
-      var _this = this;
-
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(ClassName$4.ACTIVE) || $(this._element).hasClass(ClassName$4.DISABLED)) {
-        return;
-      }
-
-      var target;
-      var previous;
-      var listElement = $(this._element).closest(Selector$4.NAV_LIST_GROUP)[0];
-      var selector = Util.getSelectorFromElement(this._element);
-
-      if (listElement) {
-        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector$4.ACTIVE_UL : Selector$4.ACTIVE;
-        previous = $.makeArray($(listElement).find(itemSelector));
-        previous = previous[previous.length - 1];
-      }
-
-      var hideEvent = $.Event(Event$4.HIDE, {
-        relatedTarget: this._element
-      });
-      var showEvent = $.Event(Event$4.SHOW, {
-        relatedTarget: previous
-      });
-
-      if (previous) {
-        $(previous).trigger(hideEvent);
-      }
-
-      $(this._element).trigger(showEvent);
-
-      if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
-        return;
-      }
-
-      if (selector) {
-        target = document.querySelector(selector);
-      }
-
-      this._activate(this._element, listElement);
-
-      var complete = function complete() {
-        var hiddenEvent = $.Event(Event$4.HIDDEN, {
-          relatedTarget: _this._element
-        });
-        var shownEvent = $.Event(Event$4.SHOWN, {
-          relatedTarget: previous
-        });
-        $(previous).trigger(hiddenEvent);
-        $(_this._element).trigger(shownEvent);
-      };
-
-      if (target) {
-        this._activate(target, target.parentNode, complete);
-      } else {
-        complete();
-      }
-    };
-
-    _proto.dispose = function dispose() {
-      $.removeData(this._element, DATA_KEY$4);
-      this._element = null;
-    } // Private
-    ;
-
-    _proto._activate = function _activate(element, container, callback) {
-      var _this2 = this;
-
-      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $(container).find(Selector$4.ACTIVE_UL) : $(container).children(Selector$4.ACTIVE);
-      var active = activeElements[0];
-      var isTransitioning = callback && active && $(active).hasClass(ClassName$4.FADE);
-
-      var complete = function complete() {
-        return _this2._transitionComplete(element, active, callback);
-      };
-
-      if (active && isTransitioning) {
-        var transitionDuration = Util.getTransitionDurationFromElement(active);
-        $(active).removeClass(ClassName$4.SHOW).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-      } else {
-        complete();
-      }
-    };
-
-    _proto._transitionComplete = function _transitionComplete(element, active, callback) {
-      if (active) {
-        $(active).removeClass(ClassName$4.ACTIVE);
-        var dropdownChild = $(active.parentNode).find(Selector$4.DROPDOWN_ACTIVE_CHILD)[0];
-
-        if (dropdownChild) {
-          $(dropdownChild).removeClass(ClassName$4.ACTIVE);
-        }
-
-        if (active.getAttribute('role') === 'tab') {
-          active.setAttribute('aria-selected', false);
-        }
-      }
-
-      $(element).addClass(ClassName$4.ACTIVE);
-
-      if (element.getAttribute('role') === 'tab') {
-        element.setAttribute('aria-selected', true);
-      }
-
-      Util.reflow(element);
-
-      if (element.classList.contains(ClassName$4.FADE)) {
-        element.classList.add(ClassName$4.SHOW);
-      }
-
-      if (element.parentNode && $(element.parentNode).hasClass(ClassName$4.DROPDOWN_MENU)) {
-        var dropdownElement = $(element).closest(Selector$4.DROPDOWN)[0];
-
-        if (dropdownElement) {
-          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector$4.DROPDOWN_TOGGLE));
-          $(dropdownToggleList).addClass(ClassName$4.ACTIVE);
-        }
-
-        element.setAttribute('aria-expanded', true);
-      }
-
-      if (callback) {
-        callback();
-      }
-    } // Static
-    ;
-
-    Tab._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        var $this = $(this);
-        var data = $this.data(DATA_KEY$4);
-
-        if (!data) {
-          data = new Tab(this);
-          $this.data(DATA_KEY$4, data);
-        }
-
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError("No method named \"" + config + "\"");
-          }
-
-          data[config]();
-        }
-      });
-    };
-
-    _createClass(Tab, null, [{
-      key: "VERSION",
-      get: function get() {
-        return VERSION$4;
-      }
-    }]);
-
-    return Tab;
-  }();
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
-
-
-  $(document).on(Event$4.CLICK_DATA_API, Selector$4.DATA_TOGGLE, function (event) {
-    event.preventDefault();
-
-    Tab._jQueryInterface.call($(this), 'show');
-  });
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   */
-
-  $.fn[NAME$4] = Tab._jQueryInterface;
-  $.fn[NAME$4].Constructor = Tab;
-
-  $.fn[NAME$4].noConflict = function () {
-    $.fn[NAME$4] = JQUERY_NO_CONFLICT$4;
-    return Tab._jQueryInterface;
-  };
-
-  /**
    * --------------------------------------------------------------------------
    * Bootstrap (v4.3.1): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -4808,11 +4573,11 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$5 = 'tooltip';
-  var VERSION$5 = '4.3.1';
-  var DATA_KEY$5 = 'bs.tooltip';
-  var EVENT_KEY$5 = "." + DATA_KEY$5;
-  var JQUERY_NO_CONFLICT$5 = $.fn[NAME$5];
+  var NAME$4 = 'tooltip';
+  var VERSION$4 = '4.3.1';
+  var DATA_KEY$4 = 'bs.tooltip';
+  var EVENT_KEY$4 = "." + DATA_KEY$4;
+  var JQUERY_NO_CONFLICT$4 = $.fn[NAME$4];
   var CLASS_PREFIX = 'bs-tooltip';
   var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
   var DISALLOWED_ATTRIBUTES = ['sanitize', 'whiteList', 'sanitizeFn'];
@@ -4861,23 +4626,23 @@
     SHOW: 'show',
     OUT: 'out'
   };
-  var Event$5 = {
-    HIDE: "hide" + EVENT_KEY$5,
-    HIDDEN: "hidden" + EVENT_KEY$5,
-    SHOW: "show" + EVENT_KEY$5,
-    SHOWN: "shown" + EVENT_KEY$5,
-    INSERTED: "inserted" + EVENT_KEY$5,
-    CLICK: "click" + EVENT_KEY$5,
-    FOCUSIN: "focusin" + EVENT_KEY$5,
-    FOCUSOUT: "focusout" + EVENT_KEY$5,
-    MOUSEENTER: "mouseenter" + EVENT_KEY$5,
-    MOUSELEAVE: "mouseleave" + EVENT_KEY$5
+  var Event$4 = {
+    HIDE: "hide" + EVENT_KEY$4,
+    HIDDEN: "hidden" + EVENT_KEY$4,
+    SHOW: "show" + EVENT_KEY$4,
+    SHOWN: "shown" + EVENT_KEY$4,
+    INSERTED: "inserted" + EVENT_KEY$4,
+    CLICK: "click" + EVENT_KEY$4,
+    FOCUSIN: "focusin" + EVENT_KEY$4,
+    FOCUSOUT: "focusout" + EVENT_KEY$4,
+    MOUSEENTER: "mouseenter" + EVENT_KEY$4,
+    MOUSELEAVE: "mouseleave" + EVENT_KEY$4
   };
-  var ClassName$5 = {
+  var ClassName$4 = {
     FADE: 'fade',
     SHOW: 'show'
   };
-  var Selector$5 = {
+  var Selector$4 = {
     TOOLTIP: '.tooltip',
     TOOLTIP_INNER: '.tooltip-inner',
     ARROW: '.arrow'
@@ -4959,7 +4724,7 @@
           context._leave(null, context);
         }
       } else {
-        if ($(this.getTipElement()).hasClass(ClassName$5.SHOW)) {
+        if ($(this.getTipElement()).hasClass(ClassName$4.SHOW)) {
           this._leave(null, this);
 
           return;
@@ -5019,7 +4784,7 @@
         this.setContent();
 
         if (this.config.animation) {
-          $(tip).addClass(ClassName$5.FADE);
+          $(tip).addClass(ClassName$4.FADE);
         }
 
         var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
@@ -5045,7 +4810,7 @@
               behavior: this.config.fallbackPlacement
             },
             arrow: {
-              element: Selector$5.ARROW
+              element: Selector$4.ARROW
             },
             preventOverflow: {
               boundariesElement: this.config.boundary
@@ -5060,7 +4825,7 @@
             return _this._handlePopperPlacementChange(data);
           }
         });
-        $(tip).addClass(ClassName$5.SHOW); // If this is a touch-enabled device we add extra
+        $(tip).addClass(ClassName$4.SHOW); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
@@ -5083,7 +4848,7 @@
           }
         };
 
-        if ($(this.tip).hasClass(ClassName$5.FADE)) {
+        if ($(this.tip).hasClass(ClassName$4.FADE)) {
           var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
           $(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
         } else {
@@ -5124,7 +4889,7 @@
         return;
       }
 
-      $(tip).removeClass(ClassName$5.SHOW); // If this is a touch-enabled device we remove the extra
+      $(tip).removeClass(ClassName$4.SHOW); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
       if ('ontouchstart' in document.documentElement) {
@@ -5135,7 +4900,7 @@
       this._activeTrigger[Trigger.FOCUS] = false;
       this._activeTrigger[Trigger.HOVER] = false;
 
-      if ($(this.tip).hasClass(ClassName$5.FADE)) {
+      if ($(this.tip).hasClass(ClassName$4.FADE)) {
         var transitionDuration = Util.getTransitionDurationFromElement(tip);
         $(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
@@ -5167,8 +4932,8 @@
 
     _proto.setContent = function setContent() {
       var tip = this.getTipElement();
-      this.setElementContent($(tip.querySelectorAll(Selector$5.TOOLTIP_INNER)), this.getTitle());
-      $(tip).removeClass(ClassName$5.FADE + " " + ClassName$5.SHOW);
+      this.setElementContent($(tip.querySelectorAll(Selector$4.TOOLTIP_INNER)), this.getTitle());
+      $(tip).removeClass(ClassName$4.FADE + " " + ClassName$4.SHOW);
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
@@ -5297,7 +5062,7 @@
         context._activeTrigger[event.type === 'focusin' ? Trigger.FOCUS : Trigger.HOVER] = true;
       }
 
-      if ($(context.getTipElement()).hasClass(ClassName$5.SHOW) || context._hoverState === HoverState.SHOW) {
+      if ($(context.getTipElement()).hasClass(ClassName$4.SHOW) || context._hoverState === HoverState.SHOW) {
         context._hoverState = HoverState.SHOW;
         return;
       }
@@ -5383,7 +5148,7 @@
         config.content = config.content.toString();
       }
 
-      Util.typeCheckConfig(NAME$5, config, this.constructor.DefaultType);
+      Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
 
       if (config.sanitize) {
         config.template = sanitizeHtml(config.template, config.whiteList, config.sanitizeFn);
@@ -5432,7 +5197,7 @@
         return;
       }
 
-      $(tip).removeClass(ClassName$5.FADE);
+      $(tip).removeClass(ClassName$4.FADE);
       this.config.animation = false;
       this.hide();
       this.show();
@@ -5442,7 +5207,7 @@
 
     Tooltip._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY$5);
+        var data = $(this).data(DATA_KEY$4);
 
         var _config = typeof config === 'object' && config;
 
@@ -5452,7 +5217,7 @@
 
         if (!data) {
           data = new Tooltip(this, _config);
-          $(this).data(DATA_KEY$5, data);
+          $(this).data(DATA_KEY$4, data);
         }
 
         if (typeof config === 'string') {
@@ -5468,7 +5233,7 @@
     _createClass(Tooltip, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$5;
+        return VERSION$4;
       }
     }, {
       key: "Default",
@@ -5478,22 +5243,22 @@
     }, {
       key: "NAME",
       get: function get() {
-        return NAME$5;
+        return NAME$4;
       }
     }, {
       key: "DATA_KEY",
       get: function get() {
-        return DATA_KEY$5;
+        return DATA_KEY$4;
       }
     }, {
       key: "Event",
       get: function get() {
-        return Event$5;
+        return Event$4;
       }
     }, {
       key: "EVENT_KEY",
       get: function get() {
-        return EVENT_KEY$5;
+        return EVENT_KEY$4;
       }
     }, {
       key: "DefaultType",
@@ -5511,11 +5276,11 @@
    */
 
 
-  $.fn[NAME$5] = Tooltip._jQueryInterface;
-  $.fn[NAME$5].Constructor = Tooltip;
+  $.fn[NAME$4] = Tooltip._jQueryInterface;
+  $.fn[NAME$4].Constructor = Tooltip;
 
-  $.fn[NAME$5].noConflict = function () {
-    $.fn[NAME$5] = JQUERY_NO_CONFLICT$5;
+  $.fn[NAME$4].noConflict = function () {
+    $.fn[NAME$4] = JQUERY_NO_CONFLICT$4;
     return Tooltip._jQueryInterface;
   };
 
@@ -5548,7 +5313,6 @@
   exports.Carousel = Carousel;
   exports.Collapse = Collapse;
   exports.Dropdown = Dropdown;
-  exports.Tab = Tab;
   exports.Tooltip = Tooltip;
 
   Object.defineProperty(exports, '__esModule', { value: true });
