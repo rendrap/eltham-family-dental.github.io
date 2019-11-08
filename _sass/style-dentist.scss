@@ -50,3 +50,7 @@
 .pelorus {
   color: #3DADB2
 }
+
+img.lazyload:not([src]) {
+  visibility: hidden;
+}
