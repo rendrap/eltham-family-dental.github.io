@@ -7428,9 +7428,9 @@ jQuery(document).ready(function($) {
 
     $(window).scroll(function() {
         if ($(this).scrollTop() > 70) {
-            $('#back-to-top').fadeIn();
+            $('#back-to-top').show(150);
         } else {
-            $('#back-to-top').fadeOut();
+            $('#back-to-top').hide(150);
         }
     });
     // scroll body to 0px on click
