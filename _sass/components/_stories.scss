@@ -12,23 +12,18 @@
             .item-1 {
                 grid-area: item-1;
             }
-
             .item-2 {
                 grid-area: item-2;
             }
-
             .item-3 {
                 grid-area: item-3;
             }
-
             .item-4 {
                 grid-area: item-4;
             }
-
             .item-5 {
                 grid-area: item-5;
             }
-
             .item-6 {
                 grid-area: item-6;
             }
@@ -83,6 +78,10 @@
                 content: none;
             }
         }
+    }
+    .btn.btn-link {
+        color: $colorPrimary;
+        font-weight: bold;
     }
 }
 
