@@ -1,11 +1,13 @@
 /* FOOTER
 -------------------------------------------------*/
-.main-footer {
-    @extend %space;
-    color: $white;
-    background: lighten($colorPrimary, 2%);
-    text-align: center;
-    small {
-        display: block;
+.footer {
+    margin-bottom: 48px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 0;
     }
+}
+
+.bg-black {
+    background-color: #1D1D1D;
 }
