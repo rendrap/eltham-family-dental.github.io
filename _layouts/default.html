@@ -16,6 +16,7 @@
     {% endif %}
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    {% if page.name == 'index.html' %}
     <script>
     var map;
       function initMap() {
@@ -60,6 +61,8 @@
     }
     </script>
     <script rel="preconnect" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0&callback=initMap" async defer></script>
+    {% endif %}
+
     {% if page.name == 'team.html' %}
     <script src="{{ "/js/owl.carousel.js" | relative_url }}"></script>
     <script>
