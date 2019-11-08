@@ -42,6 +42,7 @@
                     origin: new google.maps.Point(0, 0),
                     anchor: new google.maps.Point(45, 80),
                 };
+                var api_key = 'AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0';
                 //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
                 resultsMap.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker( {
@@ -59,8 +60,33 @@
             }
         } );
     }
+    function google_maps_lazyload(api_key) {
+      'use strict'
+
+      if (api_key) {
+        var options = {
+          threshold: 0
+        }
+        var map = document.getElementById('location')
+        var observer = new IntersectionObserver(
+          function(entries, self) {
+            var isIntersecting = typeof entries[0].isIntersecting === 'boolean' ? entries[0].isIntersecting : entries[0].intersectionRatio > 0
+            if (isIntersecting) {
+              var mapsJS = document.createElement('script')
+              mapsJS.src = 'https://maps.googleapis.com/maps/api/js?callback=initMap&key=' + api_key
+              document.getElementsByTagName('head')[0].appendChild(mapsJS)
+              self.unobserve(map)
+            }
+          },
+          options
+        )
+
+        observer.observe(map)
+      }
+    }
+
+    google_maps_lazyload("AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0")
     </script>
-    <script rel="preconnect" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0&callback=initMap" async defer></script>
     {% endif %}
 
     {% if page.name == 'team.html' %}
