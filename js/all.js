@@ -7414,10 +7414,6 @@ jQuery(document).ready(function($) {
     // scroll body to 0px on click
     $('#back-to-top').click(function() {
         $('#back-to-top').tooltip('hide');
-        $('body,html').velocity({
-            scrollTop: 0
-        }, 800);
-        return false;
     });
 
     if ($('#back-to-top').css('display') !== 'none') {
