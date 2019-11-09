@@ -9,7 +9,7 @@ module.exports = function (grunt) {
                 separator: "\n\n"
             },
             dist: {
-                src: ['js/bootstrap.bundle.js', 'js/jquery.magnific-popup.js', 'js/velocity.min.js', 'js/custom.js','js/main.min.js'],
+                src: ['js/bootstrap.bundle.js', 'js/jquery.magnific-popup.js', 'js/custom.js','js/main.min.js'],
                 dest: 'js/all.js'
             }
         },
@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         uglify: {
             main: {
                 files: {
-                    'js/all.min.js' : ['js/all.js'],
+                    'js/all.min.js' : ['js/all.js']
                 }
             }
         },
