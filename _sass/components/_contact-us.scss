@@ -1,0 +1,7 @@
+.section {
+    .section-contact-us {
+        @include media-breakpoint-up(lg) {
+            padding: 90px 0;
+        }
+    }
+}
