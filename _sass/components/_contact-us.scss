@@ -1,8 +1,14 @@
 .section {
-    .section-contact-us {
+    &.section-contact-us {
         @include media-breakpoint-up(lg) {
             padding: 90px 0;
         }
+	    p:last-child {
+	    	margin-bottom: 1rem;
+	    }
+	    p.small.grey {
+	    	font-weight: bold;
+	    }
     }
 }
 
@@ -27,5 +33,8 @@
 
     .small {
         font-size: 16px;
+    }
+    .mb-70 {
+    	margin-bottom: 70px;
     }
 }
