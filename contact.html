@@ -54,24 +54,7 @@ layout: default
             </div>
             <div class="col-lg-6 bg-grey3 py-5">
                 <div class="px-lg-5">
-                    <h4 class="font-weight-bold mb-4">Make an Enquiry</h4>
-                    <div role="form" class="wpcf7" id="wpcf7-f10-p201-o1" lang="en-US" dir="ltr">
-                        <div class="screen-reader-response"></div>
-                        <form action="/contact/#wpcf7-f10-p201-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                            <div style="display: none;"> <input type="hidden" name="_wpcf7" value="10"> <input type="hidden" name="_wpcf7_version" value="5.1.4"> <input type="hidden" name="_wpcf7_locale" value="en_US"> <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f10-p201-o1"> <input type="hidden" name="_wpcf7_container_post" value="201"> <input type="hidden" name="_wpcf7cf_hidden_group_fields" value="[]"> <input type="hidden" name="_wpcf7cf_hidden_groups" value="[]"> <input type="hidden" name="_wpcf7cf_visible_groups" value="[]"> <input type="hidden" name="_wpcf7cf_options" value="{&quot;form_id&quot;:10,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:200,&quot;animation_outtime&quot;:200,&quot;notice_dismissed&quot;:false}}"> <input type="hidden" name="g-recaptcha-response" value=""></div> <label> <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Full Name*"></span> </label><label> <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email*"></span> </label><label> <span class="wpcf7-form-control-wrap your-phone"><input type="tel" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Phone*"></span> </label><label> <span class="wpcf7-form-control-wrap practice-location"><input type="text" name="practice-location" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Practice Location"></span> </label><label> <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Message*"></textarea></span> </label>
-                            <div class="wpcf7-form-control-wrap">
-                                <div data-sitekey="6LfyqnoUAAAAADCh57_D78RDVbnCkIqWf1J4ApH2" class="wpcf7-form-control g-recaptcha wpcf7-recaptcha">
-                                    <div style="width: 304px; height: 78px;">
-                                        <div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfyqnoUAAAAADCh57_D78RDVbnCkIqWf1J4ApH2&amp;co=aHR0cHM6Ly93d3cuZXllY2FyZXBsdXMuY29tLmF1OjQ0Mw..&amp;hl=en&amp;v=0bBqi43w2fj-Lg1N3qzsqHNu&amp;size=normal&amp;cb=b1igxmzd0ka4" width="304" height="78" role="presentation" name="a-2j1d1kyg4otx" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                                    </div>
-                                </div> <noscript>
-                                    <div class="grecaptcha-noscript"> <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LfyqnoUAAAAADCh57_D78RDVbnCkIqWf1J4ApH2" frameborder="0" scrolling="no" width="310" height="430"> </iframe><textarea name="g-recaptcha-response" rows="3" cols="40" placeholder="reCaptcha Response Here">
-	</textarea></div>
-                                </noscript>
-                            </div><input type="submit" value="Send Enquiry" class="wpcf7-form-control wpcf7-submit btn btn-orange"><span class="ajax-loader"></span>
-                            <div class="wpcf7-response-output wpcf7-display-none"></div>
-                        </form>
-                    </div>
+                    {% include contact-form.html %}
                 </div>
             </div>
         </div>

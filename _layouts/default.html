@@ -81,6 +81,10 @@
     </script>
     {% endif %}
 
+    {% if page.name == 'contact.html' %}
+    {% include form-js.html %}
+    {% endif %}
+
     {% if page.name == 'team.html' %}
     <script src="{{ "/js/owl.carousel.js" | relative_url }}"></script>
     <script>
