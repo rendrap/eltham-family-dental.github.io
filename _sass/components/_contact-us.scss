@@ -9,6 +9,10 @@
 .section-contact-us {
     position: relative;
     line-height: 21px;
+    h1,h3,h4 {font-size: 32px;color: $black;}
+    @include media-breakpoint-down(sm) {
+    	h1,h3,h4 {font-size: 28px;color: $black;}
+    }
 
     &:before {
         @include media-breakpoint-up(lg) {
@@ -22,6 +26,6 @@
     }
 
     .small {
-        font-size: 14px;
+        font-size: 16px;
     }
 }

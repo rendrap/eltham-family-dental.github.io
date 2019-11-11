@@ -12,31 +12,29 @@ layout: default
                         <tbody>
                             <tr>
                                 <td class="align-top pr-0 pr-md-5">
-                                    <p class="small grey">Phone</p> <address class="mb-0">1300 EYECARE (393 227)</address>
-                                </td>
-                                <td class="align-top">
-                                    <p class="small grey">Administration enquires</p>
-                                    <p><a href="tel:(02)93152900">(02) 9315 2900</a></p>
+                                    <p class="small grey">Phone</p> <address class="mb-0">{{ site.contact.phone }}</address>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="pt-5" colspan="2">
-                                    <p class="small grey">Eyecare Plus National Office</p> <address class="mb-0">5.01/77 Dunning Avenue,<br> Rosebery NSW 2018</address>
+                                    <p class="small grey">Location</p> <address class="mb-0">{{ site.contact.address }}</address>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="align-top pr-0 pr-md-5 pt-5">
-                                    <p class="small grey">Phone</p> <address class="mb-0">(02) 9315 2900</address>
+                                    <p class="small grey">Opening Hours</p>
                                 </td>
-                                <td class="align-top pt-5">
-                                    <p class="small grey">Fax</p>
-                                    <p><a href="tel:(02)93152900">(02) 4868 2019</a></p>
+                            </tr>
+                            <tr>
+                                <td class="align-top pr-0 pr-md-5">
+                                    <p class="small grey">Monday – Friday</p>
+                                </td>
+                                <td class="align-top">
+                                    <p>{{ site.monday_friday }}</p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <p>&nbsp;</p>
-                    <p>Find out more information on becoming a member of Eyecare Plus.<br> <a class="btn btn-white mt-3" href="/join-us/">More info</a></p>
                 </div>
             </div>
             <div class="col-lg-6 bg-grey3 py-5">
