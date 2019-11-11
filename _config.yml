@@ -8,9 +8,9 @@ logo_url: svg/min/logo.svg
 # Hero
 # hero images is located inside img folder
 hero:
-    hero_img_1: hero_0
-    hero_img_2: hero_0
-    hero_img_3: hero_0
+    hero_img_1: hero_1
+    hero_img_2: hero_1
+    hero_img_3: hero_1
     hero_title: Eltham Family Dental
     hero_description: Call now to book an appointment
 carousel-interval: 4000
