@@ -24,6 +24,11 @@
             background: $colorPrimary;
         }
     }
+    // iOS phone number auto detect
+    a[href^=tel] {
+        color: inherit;
+        text-decoration: none;
+    }
     .icon {
         font-size: 2rem;
         color: $white;
