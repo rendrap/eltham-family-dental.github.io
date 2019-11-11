@@ -13,7 +13,12 @@
         {% include analytics.html %}
     {% endif %}
 
+    {% if page.name == 'team.html' %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endif %}
+    {% unless page.name == 'team.html' %}
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    {% endunless %}
     {% if page.name == 'index.html' %}
     <script>
     var map;
