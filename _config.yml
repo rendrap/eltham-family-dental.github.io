@@ -16,7 +16,7 @@ hero:
 carousel-interval: 4000
 
 # Contact form
-api_token: # Enter API token here
+api_token: b70aace5f01d
 
 # Contact info
 contact:
