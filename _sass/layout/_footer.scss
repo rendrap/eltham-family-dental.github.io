@@ -6,27 +6,50 @@
     @include media-breakpoint-up(md) {
         margin-bottom: 0;
     }
+
     .small {
-		font-size: 14px;
-	}
-	.white li a {
-	    color: #fff;
-	}
-	.icon {
-		width: 1.5em;
-		height: 1.5em;
-	}
+        font-size: 14px;
+    }
+
+    .white li a {
+        color: #fff;
+    }
+
+    .icon {
+        width: 1.5em;
+        height: 1.5em;
+    }
 }
 
 .bg-black {
     background-color: #1D1D1D;
 }
+
 .white {
     color: #fff;
 }
+
 .grey {
     color: #7D7D7D;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // .line-break {
 // 	span {
 // 		&::before {
