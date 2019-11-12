@@ -26,4 +26,44 @@
             border-radius: unset !important;
         }
     }
+
+    .generic-content {
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+            color: $grey-dark;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 30px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: $grey-dark;
+            -webkit-font-smoothing: antialiased;
+        }
+        li {
+        	font-size: 14px;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 17px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .generic-content {
+	        p, li {
+	            font-size: 16px;
+	        }
+	    }
+    }
 }
