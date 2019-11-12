@@ -225,7 +225,7 @@ layout: default
     {% for images in site.data.gallery %}
     <a href="{{ site.baseurl }}/img/gallery/large/{{ images.image_large }}" class="gallery-item expandable-box image-link">
         <div class="expandable-box-top">
-            <img src="{{ site.baseurl }}/img/gallery/thumb/{{ images.image_thumb }}" alt="{{ images.image_alt }}">
+            <img class="lazyload" data-src="{{ site.baseurl }}/img/gallery/thumb/{{ images.image_thumb }}" alt="{{ images.image_alt }}">
         </div>
         <div class="expandable-box-bottom">
             <span><svg class="icon icon-chain">
