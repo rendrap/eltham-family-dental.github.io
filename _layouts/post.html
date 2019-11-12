@@ -1,0 +1,43 @@
+{% include doctype-head.html %}
+
+<body data-offset="80" id="top">
+    {% include svg-defs.svg %}
+    <!--[if lt IE 10]>
+        <p class="oldie">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> to better experience this site.</p>
+    <![endif]-->
+    {% include header.html %}
+    <main id="content">
+        <div class="container single-post-content">
+            <div class="py-lg-5 post-thumbnail"> <img src="https://www.eyecareplus.com.au/wp-content/uploads/2019/01/Eye-strain-1200x430.png" alt="" class="img-fluid" style="width: 100%;"></div>
+            <div class="section pt-3 mx-auto" style="max-width: 924px;">
+                <article id="post-1883" class="post-1883 post type-post status-publish format-standard has-post-thumbnail hentry category-eye-health">
+                    <header class="entry-header mb-3 mb-lg-5">
+                        <h1 class="entry-title font-weight-bold py-4 grey-dark mb-4">How to Reeilve Ditigal Eye Siartn</h1>
+                        <p class="smaller font-weight-bold grey">15 JAN 2019</p>
+                        <p> <span class="btn btn-sm btn-white text-uppercase mb-3 pelorus">Eye health</span></p>
+                    </header>
+                    <div class="entry-content generic-content">
+                        {{ content }}
+                    </div>
+                    <div class="clearfix"></div>
+                </article>
+            </div>
+        </div>
+    </main>
+    {% include footer.html %}
+    {% if site.analytics %}
+    {% include analytics.html %}
+    {% endif %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script rel="preload" src="{{ "/js/all.min.js?cb=1573471678635" | relative_url }}"></script>
+    <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.no-fouc').removeClass('no-fouc');
+    });
+    </script>
+</body>
+
+</html>

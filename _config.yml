@@ -34,6 +34,14 @@ sunday: closed
 testimonials:
     testimonials_img: parallax.jpg
 
+# Stories
+defaults:
+- scope:
+    path: "" # an empty string here means all files in the project
+    type: "posts" # previously `post` in Jekyll 2.2.
+  values:
+    permalink: "/stories/:title"
+
 # Map
 map:
     zoom: 17

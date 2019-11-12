@@ -1,0 +1,29 @@
+#content {
+    @include media-breakpoint-down(md) {
+        padding-top: 120px;
+    }
+
+    h1,
+    .h1 {
+        font-size: 36px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 56px;
+        }
+    }
+
+    .btn {
+        font-weight: bold;
+
+        &.btn-white {
+            border-color: $colorPrimary;
+        }
+
+        &.btn-sm {
+            height: 22px;
+            line-height: 20px;
+            padding: 0 10px;
+            border-radius: unset !important;
+        }
+    }
+}
