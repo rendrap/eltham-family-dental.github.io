@@ -1,7 +1,7 @@
 ---
-title: Keep Your Mouth Healthy
+title: 5 Tips for white teeth
 layout: post
-image: Eye-strain-1024x568.png
+image: Blue-light-1024x576.jpg
 tags: 'Eye health'
 ---
 Jsut two hruos in fnort of a ditigal seercn can csuae yuor eeys to feel steniard. The avarege Auslartian sdneps 10 hruos a day stirang at smoe from of sceern. Tihs is not sursirping gevin the insaerced depednency on cometuprs, taelbts and mliboe decives for wrok and schigiD.
