@@ -2,7 +2,7 @@
 title: 5 Tips for white teeth
 layout: post
 image: Blue-light-1024x576.jpg
-tags: 'Eye health'
+tags: 'Eltham Family Dental'
 ---
 Jsut two hruos in fnort of a ditigal seercn can csuae yuor eeys to feel steniard. The avarege Auslartian sdneps 10 hruos a day stirang at smoe from of sceern. Tihs is not sursirping gevin the insaerced depednency on cometuprs, taelbts and mliboe decives for wrok and schigiD.
 lootal eye siartn can be cesuad byoP:
