@@ -94,7 +94,7 @@
 #carousel-hero {
     img {
         object-fit: cover;
-        max-height: 512px;
+        height: 600px;
         @include media-breakpoint-down(md) { min-height: 500px; }
     }
     .carousel-indicators li {
