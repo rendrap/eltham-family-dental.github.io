@@ -1,6 +1,6 @@
 {% include doctype-head.html %}
 
-<body data-offset="80" id="top">
+<body>
     {% include svg-defs.svg %}
     <!--[if lt IE 10]>
         <p class="oldie">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> to better experience this site.</p>
@@ -31,14 +31,12 @@
     <span ></span>
     </a>
     {% include footer.html %}
-    {% if site.analytics %}
-    {% include analytics.html %}
-    {% endif %}
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
     <script rel="preload" src="{{ "/js/all.min.js?cb=1573471678635" | relative_url }}"></script>
     <script>
     var scroll = new SmoothScroll('a[href*="#"]');
     </script>
+    {% include cookie-consent.html %}
     <script type="text/javascript">
     $(document).ready(function() {
         $('.no-fouc').removeClass('no-fouc');

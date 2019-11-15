@@ -9,10 +9,6 @@
         {{ content }}
     {% include footer.html %}
 
-    {% if site.analytics %}
-        {% include analytics.html %}
-    {% endif %}
-
     {% if page.name == 'team.html' %}
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {% endif %}
@@ -110,6 +106,7 @@
 
     <script rel="preload" src="{{ "/js/all.min.js?cb=1573471678635" | relative_url }}"></script>
     <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+    {% include cookie-consent.html %}
     <script type="text/javascript">
      $(document).ready(function() {
         $('.no-fouc').removeClass('no-fouc');
