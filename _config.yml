@@ -81,3 +81,6 @@ google_verification:
 
 sass:
     style: compressed
+
+plugins:
+  - jekyll-sitemap

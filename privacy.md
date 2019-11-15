@@ -1,5 +1,5 @@
 ---
-layout: privacy
+layout: pages
 ---
 
 ## How we process your data
