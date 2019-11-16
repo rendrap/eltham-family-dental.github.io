@@ -15,8 +15,9 @@
                 <article>
                     <header class="mb-3 mb-lg-5">
                         <h1 class="font-weight-bold py-4 grey-dark mb-4">{{ page.title }}</h1>
-                        <p class="smaller font-weight-bold grey">{{ page.date | date_to_string: "ordinal", "US" }}</p>
-                        <p> <span class="btn btn-sm btn-white text-uppercase mb-3 pelorus">{{ page.tags }}</span></p>
+                        {% include breadcrumbs.html %}
+                        <p class="d-inline smaller font-weight-bold grey">{{ page.date | date_to_string: "ordinal", "US" }}</p>
+                        <p class="d-inline pl-4"> <span class="btn btn-sm btn-white text-uppercase mb-1 pelorus">{{ page.tags }}</span></p>
                     </header>
                     <div class="generic-content">
                         {{ content }}
