@@ -56,7 +56,7 @@
     .col-lg-4 {
         ul li, tr td, p {
             // color: rgba(255,255,255,.75);
-            color: #c7e7e9;
+            color: #f4feff;
             @include media-breakpoint-down(sm) { font-size: 16px; }
             @include media-breakpoint-up(md) { font-size: 13px; }
             @include media-breakpoint-up(xl) { font-size: 14px; }

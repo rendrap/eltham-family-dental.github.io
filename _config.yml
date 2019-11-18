@@ -9,7 +9,7 @@ logo_url: svg/min/logo.svg
 # hero images is located inside img folder
 hero:
     hero_img_1: hero_family
-    hero_img_2: hero_couple
+    hero_img_2: hero_couple_crop
     hero_img_3: hero_girl
     hero_title: Eltham Family Dental
     hero_description: Call now to book an appointment
