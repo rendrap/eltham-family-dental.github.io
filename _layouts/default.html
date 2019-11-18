@@ -86,24 +86,6 @@
     {% include form-js.html %}
     {% endif %}
 
-    {% if page.name == 'team.html' %}
-    <script src="{{ "/js/owl.carousel.js" | relative_url }}"></script>
-    <script>
-    /* Team slideshow
-    ----------------------------------------------*/
-    (function($) {
-        $("#team-carousel").owlCarousel({
-
-            autoPlay: 5000, //Set AutoPlay to 5 seconds
-
-            items : 4,
-            itemsDesktopSmall : [979,3],
-            stopOnHover: true
-        });
-    })(jQuery);
-    </script>
-    {% endif %}
-
     <script rel="preload" src="{{ "/js/all.min.js?cb=1574079103778" | relative_url }}"></script>
     <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
     {% include cookie-consent.html %}
