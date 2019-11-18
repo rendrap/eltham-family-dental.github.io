@@ -106,7 +106,7 @@
         }
     }
     .carousel-caption {
-        color: $black;
+        color: $colorPrimary;
         top: 0px;
         left: 0;
         bottom: 104px;
@@ -120,7 +120,7 @@
         p {
             font-size: 20px;
         }
-        h1 { font-size: 52px; font-weight: 700; color: $black; align-content: center; }
+        h1 { font-size: 52px; font-weight: 700; color: $colorPrimary; align-content: center; }
         @include media-breakpoint-down(sm) {
             top: 78px;
             right: 5px;
