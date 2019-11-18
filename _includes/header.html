@@ -1,42 +1,50 @@
 <!-- Start Header -->
 <header id="home" class="header py-1">
-	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
-			<a class="navbar-brand" href="{{"/" | relative_url}}">
-			<img src="{{"svg/min/logo.svg" | relative_url}}" alt="Eltham Family Dental logo">
-			</a>
-			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<small class="font-weight-bold black">MENU</small>
-				<small class="font-weight-bold black d-none">CLOSE</small>
-				<img src="{{"svg/min/hamburger.svg" | relative_url}}" class="img-fluid open" width="14" alt="hamburger">
-				<img src="{{"svg/min/close.svg" | relative_url}}" class="img-fluid close d-none" width="14" alt="close">
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul id="menu-primary-menu" class="navbar-nav ml-lg-auto clearfix">
-					<li class="menu-item nav-item">
-						<a href="{{"/" | relative_url}}" class="nav-link scroll">Home</a>
-					</li>
-					<li class="menu-item menu-item-has-children dropdown nav-item">
-						<a href="#" data-toggle="dropdown" class="nav-link scroll">About Us</a>
-						<ul class="sub-menu dropdown-menu clearfix">
-						    <li class="menu-item nav-item"><a href="{{"/aboutus" | relative_url}}" class="nav-link">About Eltham Family Dental</a></li>
-						    <li class="menu-item nav-item"><a href="{{"/stories" | relative_url}}" class="nav-link">Stories</a></li>
-						    <li class="menu-item nav-item"><a href="{{"/contact" | relative_url}}" class="nav-link">Contact</a></li>
-						</ul>
-					</li>
-					<li class="menu-item nav-item">
-						<a href="{{"/#offer" | relative_url}}" class="nav-link scroll">What Can We Offer</a>
-					</li>
-					<li class="menu-item nav-item">
-						<a href="{{"/#treatments" | relative_url}}" class="nav-link scroll">Treatments</a>
-					</li>
-					<li class="menu-images menu-item nav-item">
-						<a href="{{"/team" | relative_url}}" class="nav-link scroll">Team</a>
-					</li>
-				</ul>
-	</div>
-</nav>
-</div>
-{% include svg-defs.svg %}
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
+            <a class="navbar-brand" href="{{"/" | relative_url}}">
+                <img src="{{"svg/min/logo.svg" | relative_url}}" alt="Eltham Family Dental logo">
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <small class="font-weight-bold black">MENU</small>
+                <small class="font-weight-bold black d-none">CLOSE</small>
+                <img src="{{"svg/min/hamburger.svg" | relative_url}}" class="img-fluid open" width="14" alt="hamburger">
+                <img src="{{"svg/min/close.svg" | relative_url}}" class="img-fluid close d-none" width="14" alt="close">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-end mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tel:94396517">94396517</a>
+                    </li>
+                </ul>
+                <ul id="menu-primary-menu" class="navbar-nav ml-lg-auto clearfix">
+                    <li class="menu-item nav-item">
+                        <a href="{{"/" | relative_url}}" class="nav-link scroll">Home</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children dropdown nav-item">
+                        <a href="#" data-toggle="dropdown" class="nav-link scroll">About Us</a>
+                        <ul class="sub-menu dropdown-menu clearfix">
+                            <li class="menu-item nav-item"><a href="{{"/aboutus" | relative_url}}" class="nav-link">About Eltham Family Dental</a></li>
+                            <li class="menu-item nav-item"><a href="{{"/stories" | relative_url}}" class="nav-link">Stories</a></li>
+                            <li class="menu-item nav-item"><a href="{{"/contact" | relative_url}}" class="nav-link">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item nav-item">
+                        <a href="{{"/#visit" | relative_url}}" class="nav-link scroll">Your first visit</a>
+                    </li>
+                    <li class="menu-item nav-item">
+                        <a href="{{"/#offer" | relative_url}}" class="nav-link scroll">Why Us</a>
+                    </li>
+                    <li class="menu-item nav-item">
+                        <a href="{{"/#treatments" | relative_url}}" class="nav-link scroll">Treatments</a>
+                    </li>
+                    <li class="menu-images menu-item nav-item">
+                        <a href="{{"/team" | relative_url}}" class="nav-link scroll">Team</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    {% include svg-defs.svg %}
 </header>
 <!-- End Header -->
