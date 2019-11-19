@@ -17,7 +17,7 @@ layout: default
             <div class="col-sm-6">
                 <div class="row align-items-center">
                     <div class="col-4">
-                        <img alt="image" class="img-fluid rounded" src="{{ "/img/team/" | relative_url }}{{ member.image }}">
+                        <img alt="image" class="img-fluid rounded lazyload" data-src="{{ "/img/team/" | relative_url }}{{ member.image }}">
                     </div>
                     <div class="col-8">
                         <h3><strong>{{ member.name }}</strong></h3>
