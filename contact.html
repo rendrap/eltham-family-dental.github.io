@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<!-- Start Contact section -->
+<div class="section section-contact-us">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 py-5 mb-70">
+                <h1 class="h3 font-weight-bold mb-5">Contact Eltham Family Dental</h1>
+                <div class="table-responsive">
+                    <table class="table-condensed small">
+                        <tbody>
+                            <tr>
+                                <td class="align-top pr-0 pr-md-5">
+                                    <p class="small grey">Phone</p> <address class="mb-0">{{ site.contact.phone }}</address>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pt-5" colspan="2">
+                                    <p class="small grey">Location</p> <address class="mb-0">{{ site.contact.address }}</address>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-top pr-0 pr-md-5 pt-5">
+                                    <p class="small grey">Opening Hours</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-top pr-0 pr-md-5">
+                                    <p>Monday – Friday</p>
+                                </td>
+                                <td class="align-top">
+                                    <p>{{ site.monday_friday }}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-top pr-0 pr-md-5">
+                                    <p>Saturday</p>
+                                </td>
+                                <td class="align-top">
+                                    <p>{{ site.saturday }}</p>
+                                </td>
+                            </tr><tr>
+                                <td class="align-top pr-0 pr-md-5">
+                                    <p>Sunday</p>
+                                </td>
+                                <td class="align-top">
+                                    <p>{{ site.sunday }}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-6 bg-grey3 py-5">
+                <div class="px-lg-5">
+                    {% include contact-form.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact section -->

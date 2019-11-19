@@ -1,0 +1,28 @@
+#content {
+    .privacy{
+        a {
+            text-decoration: none;
+        }
+        p {
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+
+        @include media-breakpoint-up(md) {
+            p {
+                font-size: 16px;
+            }
+            h2 {
+                font-size: 38px;
+            }
+            h3 {
+                font-size: 26px;
+            }
+        }
+    }
+}

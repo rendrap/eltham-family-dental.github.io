@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@import "utils/config";
+@import "lib/bootstrap/bootstrap";
+
+@import "utils/mixins";
+@import "utils/extends";
+
+@import "base/global";
+@import "base/typography";
+
+@import "layout/layout";
+@import "layout/nav";
+@import "layout/footer";
+
+@import "components/hero";
+@import "components/form";
+@import "components/three-shade-columns";
+@import "components/section-title";
+@import "components/treatments";
+@import "components/about";
+@import "components/testimonials";
+@import "components/gallery";
+@import "components/svg-icons";
+@import "components/icons-style";
+@import "components/expandable-box";
+@import "components/tooltip";
+@import "components/team";
+@import "components/social";
+@import "components/ie";
+@import "components/vision";
+@import "components/back-to-top";
+@import "components/stories";
+@import "components/contact-us";
+@import "components/post";
+@import "components/privacy";
+@import "components/sitemap";
+
+// @import "vendor/owl-carousel";
+@import "vendor/magnific-popup";
+
+/**  Shadow **/
+.box-shadow{
+  -webkit-box-shadow: 0 0 15px 0 rgba(41,61,88,.1);
+  -moz-box-shadow: 0 0 15px 0 rgba(41,61,88,.1);
+  box-shadow: 0 0 15px 0 rgba(41,61,88,.1);
+}
+.box-shadow2{
+  -webkit-box-shadow: 0 0 25px 0 rgba(41,61,88,.06);
+  -moz-box-shadow: 0 0 25px 0 rgba(41,61,88,.06);
+  box-shadow: 0 0 25px 0 rgba(41,61,88,.06);
+}
+
+.pelorus {
+  color: #3DADB2
+}
+
+img.lazyload:not([src]) {
+  visibility: hidden;
+}

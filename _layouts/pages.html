@@ -1,0 +1,31 @@
+{% include doctype-head.html %}
+
+<body>
+    <!--[if lt IE 10]>
+        <p class="oldie">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> to better experience this site.</p>
+    <![endif]-->
+    {% include header.html %}
+    <main id="content" class="mt-lg-4">
+        <div class="container privacy">
+            <div class="section pt-3 mx-auto" style="max-width: 924px;">
+                <article>
+                    {{ content }}
+                </article>
+            </div>
+        </div>
+    </main>
+    {% include footer.html %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script rel="preload" src="{{ "/js/all.min.js?cb=1573471678635" | relative_url }}"></script>
+    <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    {% include cookie-consent.html %}
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.no-fouc').removeClass('no-fouc');
+    });
+    </script>
+</body>
+
+</html>

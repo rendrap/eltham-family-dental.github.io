@@ -1,0 +1,48 @@
+{% include doctype-head.html %}
+
+<body>
+    {% include svg-defs.svg %}
+    <!--[if lt IE 10]>
+        <p class="oldie">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> to better experience this site.</p>
+    <![endif]-->
+    {% include header.html %}
+    <main id="content">
+        <div class="container single-post-content">
+            <div class="py-lg-5 post-thumbnail">
+                <img src="{{ "/img/" | relative_url }}{{ page.image }}" alt="post image" class="img-fluid" style="width: 100%;">
+            </div>
+            <div class="section pt-3 mx-auto" style="max-width: 924px;">
+                <article>
+                    <header class="mb-3 mb-lg-5">
+                        <h1 class="font-weight-bold py-4 grey-dark mb-4">{{ page.title }}</h1>
+                        {% include breadcrumbs.html %}
+                        <p class="d-inline smaller font-weight-bold grey">{{ page.date | date_to_string: "ordinal", "US" }}</p>
+                        <p class="d-inline pl-4"> <span class="btn btn-sm btn-white text-uppercase mb-1 pelorus">{{ page.tags }}</span></p>
+                    </header>
+                    <div class="generic-content">
+                        {{ content }}
+                    </div>
+                    <div class="clearfix"></div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <a id="back-to-top" href="#home" class="btn btn-dental back-to-top" role="button" title="Click to return on the top page"
+    data-toggle="tooltip" data-placement="left">
+    <span ></span>
+    </a>
+    {% include footer.html %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script rel="preload" src="{{ "/js/all.min.js?cb=1573471678635" | relative_url }}"></script>
+    <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    {% include cookie-consent.html %}
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.no-fouc').removeClass('no-fouc');
+    });
+    </script>
+</body>
+
+</html>

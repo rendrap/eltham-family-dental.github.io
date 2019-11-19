@@ -1,0 +1,54 @@
+<!-- Start Footer -->
+<footer class="footer section bg-black">
+    <div class="container">
+        <div class="top text-center pb-5">
+            <h5 class="grey-lighter">Looking forward to see you at Eltham Family Dental</h5>
+        </div>
+        <div class="bottom pt-5 text-center text-lg-left small">
+            <div class="row">
+                <div class="col-lg-4"> <a href="{{"/" | relative_url}}"><img src="{{"svg/min/logo.svg" | relative_url}}" alt="logo" class="img-fluid" width="130"></a>
+                    <div class="smaller">
+                        <p class="grey mt-5">{% if site.copyright %} {{ site.copyright }} {% endif %}</p>
+                        <a class=grey href="{{"/privacy" | relative_url}}">Privacy</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <p class="grey mt-5 mt-lg-0">Our Clinic</p>
+                    <ul class="list-unstyled white">
+                        <li class="mb-4"><a href="{{"/aboutus" | relative_url}}">About Us</a></li>
+                        <li class="mb-4"><a href="{{"/stories" | relative_url}}">Stories</a></li>
+                        <li class="mb-4"><a href="{{"/contact" | relative_url}}">Contact</a></li>
+                        <li class="mb-4"><a href="{{"/sitemap" | relative_url}}">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <p class="grey mt-5 mt-lg-0">Follow Us</p>
+                    <ul class="list-unstyled white">
+                        {% if site.facebook %}
+                        <li class="mb-4">
+                            <a target="_blank" href="{{ site.facebook }}">
+                                <svg class="icon icon-facebook img-fluid mr-2" width="20" alt="facebook icon" style="vertical-align: -2px;"><use xlink:href="#icon-facebook"></use></svg>Facebook
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if site.twitter %}
+                        <li class="mb-4">
+                            <a target="_blank" href="https://twitter.com/eyecareplus">
+                                 <svg class="icon icon-twitter img-fluid mr-2" width="20" alt="twitter icon" style="vertical-align: -2px;"><use xlink:href="#icon-twitter"></use></svg>Twitter
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if site.youtube %}
+                        <li class="mb-4">
+                            <a target="_blank" href="http://www.youtube.com/user/EyecarePlusAU/featured">
+                                <svg class="icon icon-youtube img-fluid mr-2" width="20" alt="youtube icon" style="vertical-align: -2px;"><use xlink:href="#icon-youtube"></use></svg>YouTube
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->

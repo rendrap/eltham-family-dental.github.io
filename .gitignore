@@ -1,0 +1,8 @@
+_site
+.sass-cache
+node_modules/
+Gemfile.lock
+_critical/
+_gulp/
+.jekyll-metadata
+_link-check.csv

@@ -1,0 +1,48 @@
+/* SECTION VISION
+-------------------------------------------------*/
+.section-vision {
+	[class*="col-"] {
+		overflow: hidden;
+	}
+	[class*="bg-grey"] {
+		h5 {
+		color :$black;
+		font-size: 22px;
+
+			@include media-breakpoint-up(md) {
+			font-size: 26px;
+			}
+		}
+		p {
+		color :$black;
+		}
+	}
+
+	img {
+		width: auto;
+		max-width: none;
+		height: 170px;
+
+		@include media-breakpoint-up(lg) {
+			height: 250px;
+		}
+	}
+}
+
+.grey-lighter {
+    color: #ECEBEA
+}
+.grey-dark {
+    color: #434343;
+}
+.bg-grey-lighter {
+    background-color: #ECEBEA
+}
+
+.grey-lightest {
+    color: #F2F2F2
+}
+
+.bg-grey-lightest {
+    background-color: #F2F2F2
+}

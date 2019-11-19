@@ -1,0 +1,136 @@
+/* HERO
+-------------------------------------------------*/
+.hero {
+    position: relative;
+    // margin-top: 70px;
+    .container-fluid {
+        position: relative;
+    }
+    .icon {
+        margin-right: 10px;
+        color: $colorPrimary;
+        vertical-align: top;
+    }
+}
+
+.hero-content {
+    padding: $space 0;
+    background: rgba($white, 0.7);
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .hero-content-inner {
+        @include breakpoint(small) {
+            width: 50%;
+        }
+    }
+    h1 {
+        margin: 0 0 5px;
+        color: $colorPrimary;
+    }
+    p {
+        font-size: 1.125rem;
+    }
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #3dadb2;
+    border-color: #3dadb2;
+}
+
+.btn-default:focus,.btn-default.focus {
+    color: #fff;
+    background-color: #30888c;
+    border-color: #1c5153
+}
+
+.btn-default:hover {
+    color: #fff;
+    background-color: #30888c;
+    border-color: #2d8184
+}
+
+.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle {
+    color: #fff;
+    background-color: #30888c;
+    border-color: #2d8184
+}
+
+.btn-default:active:hover,.btn-default:active:focus,.btn-default:active.focus,.btn-default.active:hover,.btn-default.active:focus,.btn-default.active.focus,.open>.btn-default.dropdown-toggle:hover,.open>.btn-default.dropdown-toggle:focus,.open>.btn-default.dropdown-toggle.focus {
+    color: #fff;
+    background-color: #276e71;
+    border-color: #1c5153
+}
+
+.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle {
+    background-image: none
+}
+
+.btn-default.disabled,.btn-default.disabled:hover,.btn-default.disabled:focus,.btn-default.disabled.focus,.btn-default.disabled:active,.btn-default.disabled.active,.btn-default[disabled],.btn-default[disabled]:hover,.btn-default[disabled]:focus,.btn-default[disabled].focus,.btn-default[disabled]:active,.btn-default[disabled].active,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default:hover,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default.active {
+    background-color: #3dadb2;
+    border-color: #3dadb2
+}
+
+.book-placement {
+    position: absolute;
+    top:0;
+    right:0;
+    background-color: $colorPrimary;
+    padding: 10px;
+    z-index:1;
+    @include media-breakpoint-down(md) {
+        top: 78px;
+    }
+}
+
+.block.livicon {
+    margin-left: 0 !important;
+}
+
+// Carousel
+#carousel-hero {
+    img {
+        object-fit: cover;
+        height: 600px;
+        @include media-breakpoint-down(md) { min-height: 500px; }
+    }
+    .carousel-indicators li {
+        background-color: $colorPrimary;
+    }
+    .carousel-indicators {
+        @include media-breakpoint-down(sm) {
+            bottom: 90px;
+        }
+    }
+    .carousel-caption {
+        color: $colorPrimary;
+        top: 0px;
+        left: 0;
+        bottom: 104px;
+        right: 0;
+        width: 50%;
+        margin-left: auto;
+        padding: 0;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        p {
+            font-size: 20px;
+        }
+        h1 { font-size: 52px; font-weight: 700; color: $colorPrimary; align-content: center; }
+        @include media-breakpoint-down(sm) {
+            top: 78px;
+            right: 5px;
+            width: 60%;
+            h1 { font-size: 28px; }
+            p { font-size: 14px; }
+        }
+        @include media-breakpoint-down(md) { top: 78px; }
+        @include media-breakpoint-up(xl) { h1 { font-size: 72px; line-height:86px;} }
+    }
+}
+
+

@@ -1,0 +1,235 @@
+---
+layout: default
+---
+<!--Carousel Wrapper-->
+<div id="carousel-hero" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-hero" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-hero" data-slide-to="1"></li>
+        <li data-target="#carousel-hero" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        <!--First slide-->
+        <div class="carousel-item active">
+            <picture>
+                <source class="d-block w-100" type="image/webp" srcset="{{site.baseurl}}/img/{{site.hero.hero_img_1}}.webp" >
+                <source class="d-block w-100" type="image/jpeg" srcset="{{site.baseurl}}/img/{{site.hero.hero_img_1}}.jpg" >
+                <img class="d-block w-100" src="{{site.baseurl}}/img/{{site.hero.hero_img_1}}.jpg" alt="First slide">
+            </picture>
+<!--             <div class="carousel-caption align-items-center">
+                <h1>A Dental Care<br>You Can Trust</h5>
+            </div> -->
+        </div>
+        <!--/First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+            <picture>
+                <source class="d-block w-100 lazyload" type="image/webp" data-srcset="{{site.baseurl}}/img/{{site.hero.hero_img_2}}.webp" >
+                <source class="d-block w-100 lazyload" type="image/jpeg" data-srcset="{{site.baseurl}}/img/{{site.hero.hero_img_2}}.jpg" >
+                <img class="d-block w-100 lazyload" data-src="{{site.baseurl}}/img/{{site.hero.hero_img_2}}.jpg" alt="Second slide">
+            </picture>
+<!--             <div class="carousel-caption align-items-center">
+                <h1>High-quality Services</h1>
+                <p>Providing dental needs for Eltham and surrounding areas</p>
+            </div> -->
+        </div>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <div class="carousel-item">
+            <picture>
+                <source class="d-block w-100" type="image/webp" srcset="{{site.baseurl}}/img/{{site.hero.hero_img_3}}.webp" >
+                <source class="d-block w-100" type="image/jpeg" srcset="{{site.baseurl}}/img/{{site.hero.hero_img_3}}.jpg" >
+                <img class="d-block w-100" src="{{site.baseurl}}/img/{{site.hero.hero_img_3}}.jpg" alt="Third slide">
+            </picture>
+            <div class="carousel-caption align-items-center">
+                <h1>Book Your<br>Appointment<br>Now</h1>
+            </div>
+        </div>
+        <!--/Third slide-->
+        <!--Bottom Text-->
+        <div class="hero-content">
+            <div class="container-fluid">
+                <div class="hero-content-inner">
+                    <h1>Eltham Family Dental</h1>
+                    <p>Call now to book an appointment</p>
+                </div>
+            </div>
+        </div>
+        <!--/Bottom Text-->
+    </div>
+    <!--/.Slides-->
+    {% include widget.html %}
+</div>
+<!--/.Carousel Wrapper-->
+<!-- Start 3 columns -->
+<div class="container">
+    <div class="row three-shade-col shadow">
+        <div class="col-lg-4 col-md-4 col-sm-12 box-shadow">
+            <svg class="icon icon-envelope-o">
+                <use xlink:href="#icon-envelope-o"></use>
+            </svg>
+            <h3>Contact Us</h3>
+            <ul>
+                {% if site.contact.phone %}<li><strong>Phone:</strong> {{ site.contact.phone }}</li>{% endif %}
+                {% if site.contact.emergency %}<li><strong>Emergency:</strong> {{ site.contact.emergency }}</li>{% endif %}
+                {% if site.contact.email %}<li><strong>Email:</strong> <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>{% endif %}
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 box-shadow2">
+            <svg class="icon icon-clock-o">
+                <use xlink:href="#icon-clock-o"></use>
+            </svg>
+            <h3>Opening Hours</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Monday – Friday</td>
+                        <td>{{ site.monday_friday }}</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>{{ site.saturday }}</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>{{ site.sunday }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 box-shadow">
+            <svg class="icon icon-map-marker">
+                <use xlink:href="#icon-map-marker"></use>
+            </svg>
+            <h3>Location</h3>
+            <p>
+                {{ site.contact.address }}
+            </p>
+        </div>
+    </div>
+</div>
+<!-- End 3 columns -->
+
+<!-- Start Section-vision / What Can We Offer -->
+<div id="offer" class="section section-vision mt-5">
+    <div class="container">
+        <h2 class="text-center mb-5 font-weight-bold grey-dark">Why choose us?</h2>
+        <div class="row pt-4 px-3 px-lg-0">
+
+            {% for vision in site.data.visions %}
+            <div class="col-md-6 col-lg-3 bg-grey-lightest">
+                <div class="row align-items-center">
+                    <div class="col-4 col-lg-12">
+                        <picture>
+                            <source class="lazyload img-vision" type="image/webp" data-srcset="{{ site.baseurl }}/img/{{ vision.image-webp }}" style="margin-left: -30px;">
+                            <source class="lazyload img-vision" type="image/jpeg" data-srcset="{{ site.baseurl }}/img/{{ vision.image }}" style="margin-left: -30px;">
+                            <img class="lazyload img-vision" data-src="{{ site.baseurl }}/img/{{ vision.image }}" alt="Image" style="margin-left: -30px;">
+                        </picture>
+                    </div>
+                    <div class="col-8 col-lg-12">
+                        <div class="p-3">
+                            <h5 class="font-weight-bold mb-4">{{ vision.title }}</h5>
+                            <div class="font-size-medium mb-4 mb-md-0">
+                                <p>{{ vision.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+<!-- End Section-vision -->
+<!-- Start Treatments -->
+<div id="treatments" class="treatments">
+    <div class="container">
+        <h2 class="section-title grey-dark font-weight-bold">Treatments</h2>
+        <div class="row">
+            {% for treatment in site.data.treatments %}
+                <div class="col-lg-6 col-xl-4 mb-2 mb-lg-4">
+                    <div class="dropdown dropdown-card w-100">
+                      <a class="dropdown-toggle font-weight-bold " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-display="static">
+                        <svg class="icon {{ treatment.icon }}">
+                            <use xlink:href="#{{ treatment.icon }}"></use>
+                        </svg>
+                        <h4 class="grey-dark">{{ treatment.title }}</h4>
+                     </a>
+                        <div class="dropdown-menu">
+                            <p>{{ treatment.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- End Treatments -->
+
+<!-- Start Stories -->
+<div id="stories" class="section section-local-stories bg-grey-lighter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-5">
+                <h2 class="mb-2 mb-lg-5 font-weight-bold grey-dark">Stories from EFD</h2>
+            </div>
+            <div class="col-md-6 col-lg-7 text-left text-md-right d-none d-md-block">
+                <a href="{{"/stories" | relative_url}}" class="btn btn-link" aria-label="arrow">Read more stories
+                    <img src="{{ "svg/min/arrow-right.svg" | relative_url }}" alt="Arrow" class="img-fluid ml-3" width="23">
+                </a>
+            </div>
+        </div>
+        <div class="grid-container">
+            {% assign count = 0 %}
+            {% for post in site.posts limit:3 %}
+                {% assign count = count | plus: 1 %}
+                <a href="{{ post.url | relative_url }}" class="d-block item item-img item-{{count}} bg-center {% cycle 'arrow-inset-bottom', 'arrow-inset-left', 'arrow-inset-right' %} " aria-label="image">
+                    <img class="lazyload" data-src="{{ "/img/" | relative_url }}{{ post.image }}" alt="Image">
+                </a>
+                {% assign count = count | plus: 1 %}
+                <a href="{{ post.url | relative_url }}" class="d-block item item-{{count}} bg-white" aria-label="stories">
+                    <p class="font-weight-bold">{{ post.date | date_to_string: "ordinal", "US" }}</p>
+                    <h6 class="font-weight-bold font-size-medium">{{ post.title }}</h6>
+                    <p class="small">{{ post.tags }}</p>
+                </a>
+            {% endfor %}
+        </div>
+        <div class="d-block d-md-none text-center mt-4">
+            <a href="{{"/stories" | relative_url}}" class="btn btn-link" aria-label="arrow icon">Read more stories
+                <img class="lazyload" data-src="{{ "svg/min/arrow-right.svg" | relative_url }}" alt="Arrow" class="img-fluid ml-3" width="23">
+            </a>
+        </div>
+    </div>
+</div>
+<!-- End Stories -->
+
+<!-- Start Gallery -->
+<div id="gallery" class="gallery">
+    <h2 class="section-title grey-dark font-weight-bold">Gallery</h2>
+    {% for images in site.data.gallery %}
+    <a href="{{ site.baseurl }}/img/gallery/large/{{ images.image_large }}" class="gallery-item expandable-box image-link">
+        <div class="expandable-box-top">
+            <img class="lazyload" data-src="{{ site.baseurl }}/img/gallery/thumb/{{ images.image_thumb }}" alt="{{ images.image_alt }}">
+        </div>
+        <div class="expandable-box-bottom">
+            <span><svg class="icon icon-chain">
+                    <use xlink:href="#icon-chain"></use>
+                </svg></span>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+<!-- End Gallery -->
+<!-- Start Map -->
+<div id="location" class="map"></div>
+<!-- End Map -->
+<!-- Start Back-to-top -->
+<a id="back-to-top" href="#home" class="btn btn-dental back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+    <span ></span>
+</a>
+<!-- End Back-to-top -->

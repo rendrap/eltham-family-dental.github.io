@@ -1,0 +1,86 @@
+# Site settings
+title: Eltham Family Dental
+description: "Looking after Eltham and surrounding suburbs"
+baseurl: "/dentistsmile" # the subpath of your site, e.g. /blog
+url: "https://elthamfamilydental.com.au/" # the name of your domain
+logo_url: svg/min/logo.svg
+
+# Hero
+# hero images is located inside img folder
+hero:
+    hero_img_1: hero_family
+    hero_img_2: hero_couple_padd
+    hero_img_3: hero_girl
+    hero_title: Eltham Family Dental
+    hero_description: Call now to book an appointment
+carousel-interval: 4000
+
+# Contact form
+api_token: b70aace5f01d
+
+# Contact info
+contact:
+    phone: 03 9439 6517
+    emergency:
+    email: admin@elthamfamilydental.com.au
+    address: Unit 1, 23 Dudley St<br>Eltham VIC 3095
+
+# Opening hours
+monday_friday: 9:00 – 17:30
+saturday: By appointment only
+sunday: closed
+
+# Testimonials
+testimonials:
+    testimonials_img: parallax.jpg
+
+# Stories
+defaults:
+- scope:
+    path: "" # an empty string here means all files in the project
+    type: "posts" # previously `post` in Jekyll 2.2.
+  values:
+    permalink: "/stories/:title"
+
+# Map
+map:
+    zoom: 17
+    address: unit 1 , 23 Dudley St, Eltham VIC 3095
+    address_details: svg/min/logo.svg
+
+# Social settings
+facebook: https://www.facebook.com/Eltham-Family-Dental-1300233293466426
+# twitter: http://twitter.com
+# instagram: http://instagram.com
+# youtube: http://youtube.com
+# skype: skype:obaez_design?userinfo
+# feed: yes
+
+# Footer
+copyright: © 2019<br /> Eltham Family Dental <br />All rights reserved
+
+# Build settings
+markdown: kramdown
+
+exclude: [
+    package.json,
+    Gruntfile.js,
+    node_modules,
+    .sass-cache,
+    Gemfile,
+    Gemfile.lock,
+    .gitignore,
+    _gulp,
+    _critical,
+    _src_img
+]
+
+# Theme Settings
+analytics:
+google_verification:
+
+sass:
+    style: compressed
+
+plugins:
+  - jekyll-sitemap
