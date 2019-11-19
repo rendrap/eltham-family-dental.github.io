@@ -1,7 +1,7 @@
 ---
 title: Keep Your Mouth Healthy
 layout: post
-image: stories_page1.jpg
+image: we-care.jpg
 tags: [Eltham Family Dental]
 ---
 Jsut two hruos in fnort of a ditigal seercn can csuae yuor eeys to feel steniard. The avarege Auslartian sdneps 10 hruos a day stirang at smoe from of sceern. Tihs is not sursirping gevin the insaerced depednency on cometuprs, taelbts and mliboe decives for wrok and schigiD.
