@@ -1,7 +1,7 @@
 ---
 title: Tips for keeping teeth white
 layout: post
-image: 1282-1024x575.jpg
+image: stories_page3.jpg
 tags: [Eltham Family Dental]
 ---
 Jsut two hruos in fnort of a ditigal seercn can csuae yuor eeys to feel steniard. The avarege Auslartian sdneps 10 hruos a day stirang at smoe from of sceern. Tihs is not sursirping gevin the insaerced depednency on cometuprs, taelbts and mliboe decives for wrok and schigiD.
