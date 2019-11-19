@@ -1,0 +1,101 @@
+#content {
+    .section-posts {
+        a {
+            text-decoration: none;
+        }
+        .post-title, .tags {
+            font-size: 16px;
+        }
+        .heading p{
+            font-size: 20px;
+        }
+        .heading h6 {
+            font-size: 36px;
+        }
+        .excerpt {
+          padding-top: 25px;
+          padding-bottom: 25px;
+
+          @include media-breakpoint-up(lg) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-top: -40px;
+          }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        padding-top: 120px;
+        .object-fit {
+            height: 225px;
+            object-fit: cover;
+        }
+    }
+
+    h1,
+    .h1 {
+        font-size: 36px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 56px;
+        }
+    }
+
+    .btn {
+        font-weight: bold;
+
+        &.btn-white {
+            border-color: $colorPrimary;
+        }
+
+        &.btn-sm {
+            height: 22px;
+            line-height: 20px;
+            padding: 0 10px;
+            border-radius: unset !important;
+        }
+    }
+
+    .generic-content {
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+            color: $grey-dark;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 30px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: $grey-dark;
+            -webkit-font-smoothing: antialiased;
+        }
+        li {
+        	font-size: 14px;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 17px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .generic-content {
+	        p, li {
+	            font-size: 16px;
+	        }
+	    }
+        .section-posts .post-title {
+            font-size: 32px;
+        }
+    }
+
+}

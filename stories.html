@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<main id="content" class="bg-grey-lightest">
+    <div class="section section-posts bg-grey-lightest">
+        <div class="container container-md">
+		<div class="heading mb-5">
+			<h6 class="font-weight-bold grey-dark">Stories</h6>
+			<p class="grey-dark">Read how to care for your teeth, plus view our recent news.</p>
+		</div>
+            <div class="row">
+            	{% for post in site.posts %}
+                <div class="col-lg-6">
+                	<a href="{{ post.url | relative_url }}" class="post d-block mb-3 mb-lg-5 pb-lg-4">
+                        <div class="row align-items-center">
+                            <div class="col-4 col-lg-12"> <img class="lazyload object-fit" data-src="{{ "/img/" | relative_url }}{{ post.image }}" alt="image" class="img-fluid"></div>
+                            <div class="col-8 col-lg-12">
+                                <div class="excerpt bg-white px-0 px-lg-4 position-relative">
+                                    <p class="date font-weight-bold smaller">{{ post.date | date_to_string: "ordinal", "US" }}</p>
+                                    <span class="btn btn-sm btn-white orange text-uppercase mb-3">Member story</span>
+                                    <div class="balance-elements" style="height: 105px;">
+                                        <h6 class="font-weight-bold grey-dark post-title">{{ post.title }}</h6>
+                                        <p class="tags">{{ post.tags }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            	{% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+<!-- End Stories section -->

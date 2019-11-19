@@ -1,0 +1,100 @@
+{% include doctype-head.html %}
+<body data-offset="80" id="top">
+    {% include svg-defs.svg %}
+    <!--[if lt IE 10]>
+        <p class="oldie">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> to better experience this site.</p>
+    <![endif]-->
+
+    {% include header.html %}
+        {{ content }}
+    {% include footer.html %}
+
+    {% if page.name == 'team.html' %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endif %}
+    {% unless page.name == 'team.html' %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    {% endunless %}
+    {% if page.name == 'index.html' %}
+    <script>
+    var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('location'), {
+          zoom: 17
+        });
+        var geocoder = new google.maps.Geocoder();
+        codeAddress(geocoder, map);
+    }
+
+    function codeAddress(geocoder, resultsMap) {
+        var address = "{{ site.map.address }}";
+
+        geocoder.geocode( { 'address' : address }, function( results, status ) {
+            if( status == google.maps.GeocoderStatus.OK ) {
+
+                var logo = {
+                    url: "{{ site.map.address_details }}",
+                    size: new google.maps.Size(300, 133),
+                    scaledSize: new google.maps.Size(90, 39),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(45, 80),
+                };
+                var api_key = 'AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0';
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker( {
+                    map     : resultsMap,
+                    position: results[0].geometry.location,
+                    animation: google.maps.Animation.BOUNCE,
+                    icon: logo
+                });
+                var marker = new google.maps.Marker( {
+                    map     : resultsMap,
+                    position: results[0].geometry.location,
+                });
+            } else {
+                alert( 'Google Map was not successful for the following reason: ' + status );
+            }
+        } );
+    }
+    function google_maps_lazyload(api_key) {
+      'use strict'
+      if (api_key) {
+        var options = {
+          threshold: 0
+        }
+        var map = document.getElementById('location')
+        var observer = new IntersectionObserver(
+          function(entries, self) {
+            var isIntersecting = typeof entries[0].isIntersecting === 'boolean' ? entries[0].isIntersecting : entries[0].intersectionRatio > 0
+            if (isIntersecting) {
+              var mapsJS = document.createElement('script')
+              mapsJS.src = 'https://maps.googleapis.com/maps/api/js?callback=initMap&key=' + api_key
+              document.getElementsByTagName('head')[0].appendChild(mapsJS)
+              self.unobserve(map)
+            }
+          },
+          options
+        )
+        observer.observe(map)
+      }
+    }
+    google_maps_lazyload("AIzaSyAKAMl4XkheS99AWKFP-gKmNZbyJ_mHOy0")
+    </script>
+    {% endif %}
+
+    {% if page.name == 'contact.html' %}
+    {% include form-js.html %}
+    {% endif %}
+
+    <script rel="preload" src="{{ "/js/all.min.js?cb=1574128696279" | relative_url }}"></script>
+    <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+    {% include cookie-consent.html %}
+    <script type="text/javascript">
+     $(document).ready(function() {
+        $('.no-fouc').removeClass('no-fouc');
+        $('.carousel').carousel({ interval: {{site.carousel-interval}} });
+     });
+    </script>
+
+</body>
+</html>

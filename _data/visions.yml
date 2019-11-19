@@ -1,0 +1,19 @@
+- image: brush.jpeg
+  image-webp: brush.webp
+  title: Quality and value
+  description: At Eltham Family Dental we provide customised patient friendly treatments at affordable prices. We believe everyone should have access to great dental care.
+
+- image: dental_chair.jpeg
+  image-webp: dental_chair.webp
+  title: Technology to Enhance
+  description: By using digital radiography, intra oral cameras and tooth decay detection equipment we use the latest technology to help provide quality care.
+
+- image: xray.jpg
+  image-webp: xray.webp
+  title: EFD Dental C&C package
+  description: Our comprehensive check-up & clean package involves a thorough examination of your teeth, gums, mouth and jaw joints followed by a deep dental clean.
+
+- image: smile.jpg
+  image-webp: smile.webp
+  title: Local to Eltham Always
+  description: Eltham Family Dental is owned and operated by locals . We proudly support our local community, sports clubs and other businesses.
