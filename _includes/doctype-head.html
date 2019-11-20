@@ -35,5 +35,5 @@
     <!-- Prevent google map to call google font -->
     <script>var head=document.getElementsByTagName("head")[0],insertBefore=head.insertBefore;head.insertBefore=function(e,o){e.href&&e.href.indexOf("//fonts.googleapis.com/css?family=Roboto")>-1?console.info("Prevented Roboto from loading!"):insertBefore.call(head,e,o)};
     </script>
-
+    {% include fb-pixel.html %}
 </head>
