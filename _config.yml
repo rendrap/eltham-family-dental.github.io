@@ -76,7 +76,7 @@ exclude: [
 ]
 
 # Theme Settings
-analytics:
+analytics: UA-137444156-1
 google_verification:
 
 sass:
