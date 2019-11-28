@@ -3,6 +3,6 @@ _site
 node_modules/
 Gemfile.lock
 _critical/
-_gulp/
+_gulp/node_modules/
 .jekyll-metadata
 _link-check.csv
